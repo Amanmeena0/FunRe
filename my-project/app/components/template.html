@@ -3,11 +3,10 @@
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Resume Riot | Build a resume that actually gets read.</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Work+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -80,174 +79,180 @@
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
         }
-        body { font-family: 'Work Sans', sans-serif; background-color: #f9f9f9; color: #1b1b1b; }
-        h1, h2, h3, .font-headline { font-family: 'Space Grotesk', sans-serif; }
-        .neo-shadow { shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]; }
-        .horizontal-scroll::-webkit-scrollbar { display: none; }
-        .horizontal-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+        body {
+            background-color: #f9f9f9;
+            font-family: 'Work Sans', sans-serif;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Neo-Brutalist shadow helper */
+        .brutalist-shadow {
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+        }
+        .brutalist-shadow-sm {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .brutalist-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: none;
+        }
     </style>
 </head>
-<body class="bg-background text-on-background">
+<body class="bg-background text-on-background min-h-screen pb-32">
 <!-- TopNavBar -->
-<nav class="bg-[#f9f9f9] dark:bg-[#1b1b1b] flex justify-between items-center w-full px-8 py-6 docked full-width top-0 border-b-4 border-black z-50">
-<div class="text-4xl font-black uppercase tracking-tighter text-[#1b1b1b] dark:text-[#f9f9f9]">
+<header class="fixed top-0 w-full z-50 bg-[#f9f9f9] border-b-4 border-black flex justify-between items-center px-8 py-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+<div class="text-4xl font-black uppercase tracking-tighter text-[#1b1b1b]">
             Resume Riot
         </div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-[#ab1f82] dark:text-[#ff69C9] underline decoration-4 underline-offset-8 font-bold font-label uppercase text-sm tracking-widest" href="#">Templates</a>
-<a class="text-[#1b1b1b] dark:text-[#f9f9f9] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Examples</a>
-<a class="text-[#1b1b1b] dark:text-[#f9f9f9] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Guides</a>
-<a class="text-[#1b1b1b] dark:text-[#f9f9f9] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Pricing</a>
-</div>
-<button class="bg-primary text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all uppercase font-label">
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#ab1f82] underline decoration-4 underline-offset-8 font-bold font-label uppercase text-sm tracking-widest" href="#">Templates</a>
+<a class="text-[#1b1b1b] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Examples</a>
+<a class="text-[#1b1b1b] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Guides</a>
+<a class="text-[#1b1b1b] font-bold font-label uppercase text-sm tracking-widest hover:bg-[#fec700] hover:text-black transition-colors duration-100" href="#">Pricing</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-3 font-black uppercase border-2 border-black brutalist-shadow-sm hover:bg-[#fec700] hover:text-black transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none">
             Create Resume
         </button>
-</nav>
-<main class="pt-24 pb-20">
-<!-- Hero Section -->
-<section class="px-8 py-20 flex flex-col items-center text-center bg-white border-b-4 border-black">
-<h1 class="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
-                Build a resume <br/>
-<span class="text-primary italic">that actually</span> <br/>
-                gets read.
-            </h1>
-<p class="max-w-2xl text-xl font-medium mb-12 font-body">
-                Stop being another PDF in the pile. Use aggressive layouts, loud colors, and high-impact typography to demand attention from recruiters.
+</header>
+<main class="pt-40 px-8 max-w-7xl mx-auto">
+<!-- Hero Section / Title -->
+<div class="mb-20">
+<h1 class="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-6">
+                Pick Your <span class="text-primary italic">Weapon</span>
+</h1>
+<p class="text-xl max-w-2xl font-medium leading-relaxed">
+                Standard resumes are for standard people. Choose a template that screams authority and disrupts the hiring manager's afternoon nap.
             </p>
-<button class="bg-secondary-container text-black text-2xl md:text-4xl font-black px-12 py-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff00ff] hover:text-white transition-all transform hover:-translate-y-1 hover:-translate-x-1 active:translate-x-[4px] active:translate-y-[4px] active:shadow-none uppercase font-headline">
-                Start Making a Scene
-            </button>
-</section>
-<!-- Template Carousel -->
-<section class="py-20 bg-surface-container-low overflow-hidden">
-<div class="px-8 mb-12 flex justify-between items-end">
-<div>
-<h2 class="text-5xl font-black uppercase tracking-tighter mb-2">Wacky Templates</h2>
-<p class="font-label uppercase tracking-widest text-primary font-bold">Unconventional &amp; Unignorable</p>
 </div>
-<div class="flex gap-4">
-<button class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-secondary-container transition-colors">
-<span class="material-symbols-outlined">arrow_back</span>
-</button>
-<button class="w-12 h-12 border-2 border-black flex items-center justify-center hover:bg-secondary-container transition-colors">
-<span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</div>
-<div class="horizontal-scroll flex gap-8 px-8 overflow-x-auto pb-12">
+<!-- Template Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
 <!-- Template Card 1 -->
-<div class="flex-none w-80 md:w-[450px] border-4 border-black bg-white group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-8px] transition-transform">
-<div class="h-64 border-b-4 border-black overflow-hidden relative">
-<img alt="Geocities Style" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Lo-fi 1990s internet aesthetic with pixelated graphics and vibrant neon colored geometric shapes on a dark screen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARMrdp9R6lHsSr9T_Enulsxny-1qnAiwv_hYnN5ouDVAF6YZnmr4VesXp27NWdNvxhYye_bpz2kfhSaGY6Zg7j9SODtspitWXGAs5nbDrfIleyEJebeiafEIahKjLm14Lw_ix3p5ow0OeFETg38ku2Qz-0lDNVfHN7hRm_SfwLMX-vHQRbykjZpTHvzk2C8RrMsOV49vTTOPb5Q1TmFrA5Xw6fKXR160pRQV1hNVVxbkihcCiP2a1kciYOKQ4GVoognS8aq999wXw"/>
-<div class="absolute top-4 left-4 bg-[#fec700] border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-widest">Retro</div>
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="vibrant neon resume layout with heavy typography and asymmetrical text blocks on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHUA1QiyZbcxrwnCOLzxw3RPMvtBXpkpb9vCATKo3HIVnk3DxDuHxjRWktj16DveQzIa94ZQ6c8n7BllMc9zwh8ZKLd9ynXQBidq7XWzBtsZdxpkcpJryPxk1agOrVpRd7gexu-A4mzarqOTYCglRbYNHw8_k5TKbOO8Rzg652DdLZuVrgCZn26XEzXqeRNSvjwxPGTZy6X_46Go_THV33EVBg91iDJcFhmv2iZdEQerzaQ_gH1VtyAGPXv0PekdI7sH5uFCSKcu4"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-black px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        Max Chaos
+                    </div>
 </div>
-<div class="p-6">
-<h3 class="text-3xl font-black uppercase mb-2">1990s Geocities style</h3>
-<p class="font-body text-sm mb-6">Glitchy GIFs, neon text, and a visitor counter that only goes up. Perfect for Web3 and retro devs.</p>
-<div class="flex justify-between items-center">
-<span class="font-label font-bold uppercase text-primary underline decoration-2 underline-offset-4">Preview Template</span>
-<span class="material-symbols-outlined">open_in_new</span>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">The Anarchist</h3>
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
 </div>
+<p class="text-sm font-medium mb-8 flex-grow">Zero structure, maximum impact. For roles where the only rule is that there are no rules.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
 </div>
 </div>
 <!-- Template Card 2 -->
-<div class="flex-none w-80 md:w-[450px] border-4 border-black bg-white group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-8px] transition-transform">
-<div class="h-64 border-b-4 border-black overflow-hidden relative">
-<img alt="Pizza Box" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Close up of a greasy cardboard pizza box with grease stains and bold blocky black typography printed on the side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjuNU1c90t1qOId3ehbufunP45SThQ4jO2ulsW54E22rqA4WowfzGnqld9N9rl7RsWzZFmcBuVkpnMew3zgDJiqwrJNRmOrUX87V512d216NDHpwkkTrlbpJDWPnZFJycDhKoN5oiYUU3LLFdbhS3h2TQLXoQgUw9dGNuD2M0OFumYP9EKhJaide3bcP2w6_V8zmK3Emvdb7YCX47pF2dVY-4zB7GMO1VZb0mXpHcZNa2OFwU0XbOOGtRvr4KaFvSQC_CxjiufEmM"/>
-<div class="absolute top-4 left-4 bg-primary text-white border-2 border-black px-3 py-1 font-black text-xs uppercase tracking-widest">Greasy</div>
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="retro-styled resume layout with 1980s computer interface graphics and bright pixelated accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtZNH4NOzXTabI5ytQga7w-jluNDS1hUWfUOGAcNJq2Iwnm68RlvDbhjVJt5-TJjpzOIs3ZfgKQm2pxgg0xIERcFAw1cRFXF7WFbe_HYFNioiSUIEIg9Lnl_391023A0NQceBUfDWQped11Mh0mH-bWvLjXxVe3pA-6K3WXxTpci5Ag30AjP4dA8gHGJuKsT6SYbIrUgwWJvysdSVX9dEKqQDHJ0tnZoTaWXm7Sx-H1wGliqovhLPAevB-0qpgBBtt3I85JNgVFUY"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        Retro-Cringe
+                    </div>
 </div>
-<div class="p-6">
-<h3 class="text-3xl font-black uppercase mb-2">Pizza Box layout</h3>
-<p class="font-body text-sm mb-6">Designed to look like a takeout order. "Toppings" are your skills. "Delivery Address" is your contact info.</p>
-<div class="flex justify-between items-center">
-<span class="font-label font-bold uppercase text-primary underline decoration-2 underline-offset-4">Preview Template</span>
-<span class="material-symbols-outlined">open_in_new</span>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">90s Intern</h3>
+<span class="material-symbols-outlined text-primary text-3xl">terminal</span>
 </div>
+<p class="text-sm font-medium mb-8 flex-grow">A pixelated nightmare that proves you knew how to use WordArt before your boss was born.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
 </div>
 </div>
 <!-- Template Card 3 -->
-<div class="flex-none w-80 md:w-[450px] border-4 border-black bg-white group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-8px] transition-transform">
-<div class="h-64 border-b-4 border-black overflow-hidden relative">
-<img alt="Wanted Poster" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Old weathered parchment paper with burnt edges and a grainy sepia texture reminiscent of a 19th century western poster" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA64DUy6DrtShzWuLgfNvGJZ8hL-0cP24ylnTB8ao0JtkMetft0-UBe9BBXGpPFiP5WAusq32p6gSMKU8WKdEBiyQ_L0bUtXR6z7Npvt8GcdYiLKyah0DAid6eheu2d93TGGXp1zcD_xRL6tdj8vQrRjZgvp00z2barWZfRHhF6WTQh_iX3ZNe8A-iPYQG5uAp03ud6dawrB9DhWm0Wprb5o9TREwYld4yvv9AMKOaFPnBhMBnQY9zcMdBGtjimoDLYfjMY0RfpEXM"/>
-<div class="absolute top-4 left-4 bg-black text-white border-2 border-white px-3 py-1 font-black text-xs uppercase tracking-widest">Legacy</div>
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="minimalist but high-contrast resume with massive sans-serif headers and stark black and white blocks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1OPRsUaEf_Cp_lwTks0K00Ba535m3Eqaid_88CyZ5Bky_HcURbGVemHr4EEz7y-wJ5lGi_swmYLfOHwJQJ6674jdNLW6UrpiTow5U18VMjxBWqxp2iD88LvFEobaCYSvwuowGR5UYl8IdxYzUxTzTz4999rB5KrLW_9jeKIxJQ3tM_e0GyLlKiEsXDIze8TodlRUE4S9u89aWBTLKU0CQhfPyGvhgrnCilovwGV2u66Ehwq4BIMAsrCeaBNTBBNmFLmZaZuh1IaI"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        CEO-Bait
+                    </div>
 </div>
-<div class="p-6">
-<h3 class="text-3xl font-black uppercase mb-2">'Wanted' Poster</h3>
-<p class="font-body text-sm mb-6">High-reward talent only. Featuring "Crimes" (Years of Experience) and "Last Seen" (Previous Workplace).</p>
-<div class="flex justify-between items-center">
-<span class="font-label font-bold uppercase text-primary underline decoration-2 underline-offset-4">Preview Template</span>
-<span class="material-symbols-outlined">open_in_new</span>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">Vanguard</h3>
+<span class="material-symbols-outlined text-primary text-3xl">diamond</span>
 </div>
-</div>
-</div>
-</div>
-</section>
-<!-- Feature Section: Asymmetric -->
-<section class="grid md:grid-cols-2 gap-0 border-y-4 border-black bg-white">
-<div class="p-12 md:p-24 border-b-4 md:border-b-0 md:border-r-4 border-black">
-<h2 class="text-5xl md:text-7xl font-black uppercase leading-none mb-8">
-                    Stop <br/>Asking <br/>For Permission.
-                </h2>
-<p class="text-xl mb-10 font-body">
-                    We don't use 1px borders. We don't use subtle shadows. We use Tonal Blocks and 4px heavy outlines because your career is a statement, not a secret.
-                </p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="bg-secondary-container border-2 border-black p-2 shrink-0">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span>
-</div>
-<div>
-<span class="font-black uppercase text-lg block font-headline">Fast as Hell</span>
-<span class="text-sm">Generate your draft in under 2 minutes. No fluff.</span>
+<p class="text-sm font-medium mb-8 flex-grow">Clean lines for people who make clean decisions. Sharp, authoritative, and expensive looking.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
 </div>
 </div>
-<div class="flex items-start gap-4">
-<div class="bg-primary-container border-2 border-black p-2 shrink-0">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">security</span>
+<!-- Template Card 4 -->
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="fanzine style resume with cut-and-paste aesthetics hand-drawn elements and xerox textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXQmGBAvC4S72HwKamh5zAZhvZnP3zYOZ6GRm_5bbJD8RQSzvI6QWrOa13lstADYfXaXyyKytKoGuhpXSYqsvxPi5xer4trBk4xsucL_7R12_Tb3j3fACPKCJrWhbFVeYhld7jA7bXpmmfhkfYNOj7kqkuIQq03Hq-RX3OUmovhhK_XfYC9xxq6CI1I-WNVvvkmi6RnziHWtu0ql5Gj4SksLT4_jzYkqMx6lzapOicT5gqt5LodeyXXjqE_9aKqSO7WCHPanD7lqQ"/>
+<div class="absolute top-4 left-4 bg-secondary-container text-black px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        Max Chaos
+                    </div>
 </div>
-<div>
-<span class="font-black uppercase text-lg block font-headline">Zero Tracking</span>
-<span class="text-sm">Your data is yours. We don't sell your soul to recruiters.</span>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">Zine Master</h3>
+<span class="material-symbols-outlined text-primary text-3xl">content_cut</span>
+</div>
+<p class="text-sm font-medium mb-8 flex-grow">Looking like it was made on a photocopier in 1977. Pure DIY energy for creative disruptors.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
+</div>
+</div>
+<!-- Template Card 5 -->
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="resumes with comic book layout elements including speech bubbles and bold dotted textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMpcpPd2dH2b64L34556wARilpk9jEG5xFPquekD4pfoHyRWmV-lElI5yP9jXBeAyUJ_prnkIMo93xXsbHIhGlrvwjodbkmhbOmcU6Zjl9DHXQJtbuLJ5rh7zmn__udYjR4EspfK6mSugbTXhClrAqokoHLs2sfePdPBqDLJ5SKW6XaRgHOkhELUftngrHQH8t0yQYC04xFRnD-OdG6BqJvxyHGI_Pwbci1hpDVjGVf-nKfi5EVIVN1ztshsWqfAd6L-MGurSdISk"/>
+<div class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        Retro-Cringe
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">Action Hero</h3>
+<span class="material-symbols-outlined text-primary text-3xl">sports_kabaddi</span>
+</div>
+<p class="text-sm font-medium mb-8 flex-grow">Pow! Wham! Hired! Turn your experience into a graphic novel adventure they won't forget.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
+</div>
+</div>
+<!-- Template Card 6 -->
+<div class="group flex flex-col bg-white border-4 border-black brutalist-shadow transition-all overflow-hidden">
+<div class="aspect-[3/4] bg-surface-container overflow-hidden border-b-4 border-black relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="ultra luxurious resume with gold gradients and elegant serif typography on a textured cream paper background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB52t375HJ88ngILFuq6WbdGGVODLi6KraxeCnvZDiMTMr1jH9CCklj7xvMaaah1FhN1AMgUSAUqVMo3TvwP9Xr-tTCN66YZ2En8gxzECLgzPq7ncBUxi5UtWRLQ_fy6pdnO9NfZ9FXCGbclaoe6z6-ekG3fST__ff36fNWq9zqQv-XsZnjaBsMID-iYXkUtUwgmDTkxGM27tZk4AAaVVxUMhGUvKdbDSKgtyf34Gu-M3o44s4Ar3zt_0V2FbKVmnVFcuQKfgZT4UM"/>
+<div class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 font-black text-xs uppercase border-2 border-black brutalist-shadow-sm">
+                        CEO-Bait
+                    </div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-3xl font-black uppercase tracking-tight">The Boardroom</h3>
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+</div>
+<p class="text-sm font-medium mb-8 flex-grow">For the high-flyer who doesn't just want a job, they want the keys to the kingdom.</p>
+<button class="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors active:translate-x-[2px] active:translate-y-[2px]">
+                        Select Vibe
+                    </button>
 </div>
 </div>
 </div>
-</div>
-<div class="bg-[#1b1b1b] relative overflow-hidden flex items-center justify-center p-12">
-<div class="relative z-10 text-white transform rotate-3 bg-primary p-8 border-4 border-black shadow-[12px_12px_0px_0px_rgba(254,199,0,1)] max-w-sm">
-<div class="font-black text-4xl mb-4">"Best career move I ever made. Got 5 interviews in 48 hours."</div>
-<div class="font-label uppercase font-bold tracking-widest">— Alex D., Creative Director</div>
-</div>
-<div class="absolute top-0 right-0 w-full h-full opacity-20">
-<img alt="Abstract BG" class="w-full h-full object-cover" data-alt="Abstract dynamic vibrant purple and pink liquid swirl gradient pattern with high contrast lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxXoWzbU_YmDp34gKP8_LlNrhN_a7JieiZsXx0cKzsYq3nB51UuGcFKMCczLtGLGhe9vBfCmzP_InTliZA6p3cI162sA7BZflOJh2c5lOAZodnGvK0SEWUxgGfHctxUZV2GkjBkAvWq5zDTIJZS0KNiRYKmNkUjFygUgCAYXKb3pAJlaL5s77I2zMLHomvvZaPRKNjzUyNlOXTkXMBxil7P1rb-oAcePmC6FMczhwsqkF8Tj8LepsjfF6V_F4jpThxawfpGwWaFxo"/>
-</div>
-</div>
-</section>
-<!-- Call to Action -->
-<section class="bg-primary-container py-32 px-8 flex flex-col items-center text-center">
-<h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-black mb-12">
-                REVOLUTIONIZE <br/>YOUR CV.
-            </h2>
-<div class="flex flex-col md:flex-row gap-6">
-<button class="bg-black text-white font-black text-2xl px-12 py-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,105,201,1)] hover:translate-y-[-4px] transition-transform font-headline">
-                    CHOOSE A TEMPLATE
-                </button>
-<button class="bg-white text-black font-black text-2xl px-12 py-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:translate-y-[-4px] transition-transform font-headline">
-                    SEE EXAMPLES
-                </button>
-</div>
-</section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#1b1b1b] dark:bg-black fixed bottom-0 w-full z-50 flex justify-between items-center px-8 py-4 border-t-4 border-black">
-<div class="text-[#fec700] font-label font-bold uppercase text-xs tracking-[0.2em]">
+<footer class="fixed bottom-0 w-full z-50 bg-[#1b1b1b] flex justify-between items-center px-8 py-4 border-t-4 border-black">
+<div class="text-[#fec700] font-label text-xs uppercase tracking-widest font-black">
             © 2024 RESUME RIOT. NO MERCY.
         </div>
 <div class="flex gap-8">
-<a class="text-white font-label font-bold uppercase text-xs tracking-widest hover:text-[#fec700] transition-colors" href="#">Privacy</a>
-<a class="text-white font-label font-bold uppercase text-xs tracking-widest hover:text-[#fec700] transition-colors" href="#">Terms</a>
-<a class="text-white font-label font-bold uppercase text-xs tracking-widest hover:text-[#fec700] transition-colors" href="#">Support</a>
+<a class="text-white font-label text-xs uppercase tracking-widest hover:text-[#fec700] transition-colors" href="#">Privacy</a>
+<a class="text-white font-label text-xs uppercase tracking-widest hover:text-[#fec700] transition-colors" href="#">Terms</a>
+<a class="text-white font-label text-xs uppercase tracking-widest hover:text-[#fec700] transition-colors" href="#">Support</a>
 </div>
 </footer>
 </body></html>
