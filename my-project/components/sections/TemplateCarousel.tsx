@@ -9,7 +9,7 @@ import { TemplateCardData } from "@/lib/types";
 
 const badgeStyles: Record<TemplateCardData["badgeVariant"], string> = {
   retro: "bg-[#fec700] border-2 border-black text-black",
-  greasy: "bg-primary text-white border-2 border-black",
+  greasy: "bg-[#ab1f82] text-white border-2 border-black",
   legacy: "bg-black text-white border-2 border-white",
 };
 
