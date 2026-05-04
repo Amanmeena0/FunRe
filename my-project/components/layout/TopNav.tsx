@@ -53,7 +53,7 @@ export default function TopNav({
 
       <Link
         href="/editor"
-        className="bg-primary text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
+        className="bg-[#ab1f82] text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
       >
         Create Resume
       </Link>
