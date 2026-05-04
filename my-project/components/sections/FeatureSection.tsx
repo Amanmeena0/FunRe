@@ -4,14 +4,14 @@ import MaterialIcon from "../ui/Materialcon";
 const features = [
   {
     icon: "bolt",
-    bgClass: "bg-secondary-container",
+    bgClass: "bg-[#fec700]",
     title: "Fast as Hell",
     description: "Generate your draft in under 2 minutes. No fluff.",
     filled: true,
   },
   {
     icon: "security",
-    bgClass: "bg-primary-container",
+    bgClass: "bg-[#ff69c9]",
     title: "Zero Tracking",
     description: "Your data is yours. We don't sell your soul to recruiters.",
     filled: true,
@@ -57,7 +57,7 @@ export default function FeatureSection() {
 
       {/* Right Column: Testimonial */}
       <div className="bg-[#1b1b1b] relative overflow-hidden flex items-center justify-center p-12">
-        <div className="relative z-10 text-white transform rotate-3 bg-primary p-8 border-4 border-black shadow-[12px_12px_0px_0px_rgba(254,199,0,1)] max-w-sm">
+        <div className="relative z-10 text-white transform rotate-3 bg-[#ab1f82] p-8 border-4 border-black shadow-[12px_12px_0px_0px_rgba(254,199,0,1)] max-w-sm">
           <div className="font-black text-4xl mb-4 font-headline">
             &ldquo;Best career move I ever made. Got 5 interviews in 48
             hours.&rdquo;
