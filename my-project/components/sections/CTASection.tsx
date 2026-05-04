@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="bg-primary-container py-32 px-8 flex flex-col items-center text-center">
+    <section className="bg-[#ff69c9] py-32 px-8 flex flex-col items-center text-center">
       <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter text-black mb-12 font-headline">
         REVOLUTIONIZE <br />
         YOUR CV.
