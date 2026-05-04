@@ -1,6 +1,4 @@
 "use client";
-
-import Link from "next/link";
 import MaterialIcon from "../ui/Materialcon";
 
 type EditorTab = "identity" | "experience" | "education" | "skills" | "finish";
@@ -28,7 +26,7 @@ export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) 
         </p>
       </div>
 
-      <nav className="flex-grow">
+      <nav className="grow">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.key;
           return (

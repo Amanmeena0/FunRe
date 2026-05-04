@@ -18,7 +18,7 @@ export default function EditorPage() {
     <div className="bg-background text-on-background overflow-hidden">
       <TopNav variant="editor" />
 
-      <main className="flex h-screen pt-[100px] pb-[80px]">
+      <main className="flex h-screen pt-25 pb-20">
         <EditorSideNav
           activeTab={activeTab}
           onTabChange={(tab) => setActiveTab(tab as EditorTab)}

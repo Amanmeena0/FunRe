@@ -23,7 +23,7 @@ export default function TopNav({
   return (
     <nav
       className={`bg-[#f9f9f9] dark:bg-[#1b1b1b] flex justify-between items-center w-full px-8 py-6 ${
-        isEditor ? "fixed top-0 z-[100]" : "docked full-width top-0"
+        isEditor ? "fixed top-0 z-100" : "docked full-width top-0"
       } border-b-4 border-black ${
         isEditor ? "shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]" : ""
       } z-50`}
@@ -53,7 +53,7 @@ export default function TopNav({
 
       <Link
         href="/editor"
-        className="bg-primary text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
+        className="bg-primary text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
       >
         Create Resume
       </Link>

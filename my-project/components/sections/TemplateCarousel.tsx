@@ -61,7 +61,7 @@ export default function TemplateCarousel() {
         {CAROUSEL_TEMPLATES.map((template) => (
           <div
             key={template.id}
-            className="flex-none w-80 md:w-[450px] border-4 border-black bg-white group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-transform"
+            className="flex-none w-80 md:w-112.5 border-4 border-black bg-white group cursor-pointer shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-2 transition-transform"
           >
             <div className="h-64 border-b-4 border-black overflow-hidden relative">
               <Image

@@ -26,7 +26,7 @@ export default function ResumeCanvas({ data }: ResumeCanvasProps) {
     .map((line) => line.trim());
 
   return (
-    <section className="hidden lg:flex flex-col flex-grow bg-surface-container relative overflow-hidden canvas-bg">
+    <section className="hidden lg:flex flex-col grow bg-surface-container relative overflow-hidden canvas-bg">
       {/* Canvas Controls */}
       <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20">
         <div className="bg-white px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-xs uppercase flex gap-4">
@@ -53,7 +53,7 @@ export default function ResumeCanvas({ data }: ResumeCanvasProps) {
       </div>
 
       {/* A4 Preview */}
-      <div className="flex-grow flex items-center justify-center p-12">
+      <div className="grow flex items-center justify-center p-12">
         <div
           className="bg-white border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative p-12 overflow-hidden flex flex-col"
           style={{
@@ -64,7 +64,7 @@ export default function ResumeCanvas({ data }: ResumeCanvasProps) {
           }}
         >
           {/* Resume Content */}
-          <div className="flex-grow space-y-8">
+          <div className="grow space-y-8">
             <div>
               <h1 className="text-5xl font-black font-headline uppercase leading-none mb-2">
                 {data.name.split(" ")[0]} <br />
