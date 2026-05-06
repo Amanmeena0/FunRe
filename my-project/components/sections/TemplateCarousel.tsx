@@ -84,7 +84,7 @@ export default function TemplateCarousel() {
               <p className="font-body text-sm mb-6">{template.description}</p>
               <div className="flex justify-between items-center">
                 <Link
-                  href={`/templates/${template.id}`}
+                  href={`/editor/${template.id}`}
                   className="font-label font-bold uppercase text-primary underline decoration-2 underline-offset-4"
                 >
                   Preview Template

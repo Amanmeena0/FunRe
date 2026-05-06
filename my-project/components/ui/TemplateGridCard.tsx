@@ -35,7 +35,7 @@ export default function TemplateGridCard({ template }: TemplateGridCardProps) {
           {template.description}
         </p>
         <Link
-          href={`/editor?template=${template.id}`}
+          href={`/editor/${template.id}`}
           className="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors text-center block active:translate-x-0.5 active:translate-y-0.5"
         >
           Select Vibe
