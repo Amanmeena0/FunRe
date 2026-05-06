@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import MaterialIcon from "../ui/Materialcon";
+import MaterialIcon from "./Materialcon";
 import { FullTemplateCardData } from "@/lib/types";
 
 interface TemplateGridCardProps {
