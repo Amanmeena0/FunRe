@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react"; 
 import MaterialIcon from "../ui/Materialcon";
-import { CAROUSEL_TEMPLATES } from "@/lib/templateData";
-import { TemplateCardData } from "@/lib/types";
+import { CAROUSEL_TEMPLATES } from "@/types/templateData";
+import { TemplateCardData } from "@/types/types";
 
 const badgeStyles: Record<TemplateCardData["badgeVariant"], string> = {
   retro: "bg-[#fec700] border-2 border-black text-black",

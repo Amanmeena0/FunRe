@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TopNav from "@/components/layout/TopNav";
 import Footer from "@/components/layout/Footer";
 import TemplateGridCard from "@/components/ui/TemplateGridCard";
-import { GRID_TEMPLATES } from "@/lib/templateData";
+import { GRID_TEMPLATES } from "@/types/templateData";
 
 export const metadata: Metadata = {
   title: "Resume Riot | Pick Your Weapon — Templates",

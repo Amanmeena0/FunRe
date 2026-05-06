@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import MaterialIcon from "./Materialcon";
-import { FullTemplateCardData } from "@/lib/types";
+import { FullTemplateCardData } from "@/types/types";
 
 interface TemplateGridCardProps {
   template: FullTemplateCardData;

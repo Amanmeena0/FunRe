@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import MaterialIcon from "../../ui/Materialcon";
-import { ResumeData } from "@/lib/resumeTypes";
+import { ResumeData } from "@/lib/resume/resumeTypes";
 
 interface ResumeCanvasProps {
   data: ResumeData;

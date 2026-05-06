@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ResumeData } from "@/lib/resumeTypes";
+import { ResumeData } from "@/lib/resume/resumeTypes";
 
 interface EditorFormProps {
   data: ResumeData;
