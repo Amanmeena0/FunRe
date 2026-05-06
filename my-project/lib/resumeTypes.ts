@@ -9,11 +9,11 @@ export interface ResumeData {
     linkedin?: string
     github?: string
   }
-  summary?: string;
-  Education?: { institution: string; degree: string; dateRange: string };
-  experience?: { companyName: string; jobTitle: string; dateRange: string }[];
-  projects?: { name: string; description: string; link?: string }[];
-  skills?: string[];
+  Summary: string;
+  Education: { institution: string; degree: string; dateRange: string };
+  Experience: { companyName: string; jobTitle: string; dateRange: string }[];
+  Projects?: { name: string; description: string; link?: string }[];
+  Skills: string[];
   Certifications?: string[];
   Activities?: string[];
 }
@@ -26,27 +26,27 @@ export const defaultResumeData: ResumeData = {
     phone: "+1 (555) 123-4567",
     location: "San Francisco, CA"
   },
-  summary:
+  Summary:
     "Visionary leader with a knack for turning chaos into opportunity. Expert in unconventional strategies and disruptive innovation. Passionate about creating work environments that thrive on unpredictability and fun.",
   Education: {
     institution: "DTU",
     degree: "Bachelor of Science in Chaos Studies",
     dateRange: "2020 - PRES"
   },
-  experience: [
+  Experience: [
     {
       companyName: "Global Hegemony Inc.",
       jobTitle: "Chief Chaos Officer",
       dateRange: "2020 - PRES"
     }
   ],
-  projects: [
+  Projects: [
     {
       name: "Chaos Theory Implementation",
       description: "Led the implementation of chaos theory principles in a corporate environment, resulting in increased employee engagement and productivity."
     }
   ],
-  skills: ["Chaos Management", "Disruptive Innovation", "Vibes-Based Leadership"],
+  Skills: ["Chaos Management", "Disruptive Innovation", "Vibes-Based Leadership"],
   Certifications: [
     "Certified Chaos Management Professional"
   ],
