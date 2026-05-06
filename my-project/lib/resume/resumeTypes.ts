@@ -1,4 +1,5 @@
 export interface ResumeData {
+  profilePhotoUrl?: string;
   personalInfo: {
     fullName: string
     title: string
@@ -19,6 +20,7 @@ export interface ResumeData {
 }
 
 export const defaultResumeData: ResumeData = {
+  profilePhotoUrl: "Drive link",
   personalInfo: {
     fullName: "Max Disruptor",
     title: "Chief Chaos Officer",
