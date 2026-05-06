@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { useRef } from "react"; 
 import MaterialIcon from "../ui/Materialcon";
 import { CAROUSEL_TEMPLATES } from "@/lib/templateData";
 import { TemplateCardData } from "@/lib/types";
