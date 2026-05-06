@@ -1,6 +1,6 @@
 "use client";
 
-import TopNav from "./TopNav";
+import TopNav from "../layout/TopNav";
 import EditorFooter from "./EditorFooter";
 
 interface EditorLayoutProps {
