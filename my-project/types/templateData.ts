@@ -18,7 +18,7 @@ export const CAROUSEL_TEMPLATES: TemplateCardData[] = [
 
 export const GRID_TEMPLATES: FullTemplateCardData[] = [
   {
-    id: "Mark Cafe",
+    id: "",
     title: "Mark Cafe",
     description:
       "A playful retro-modern resume with magazine aesthetics, bold typography, and creative branding layouts.",

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-
+import {saveResume} from "@/lib/resume/resumeService";
 interface TopNavProps {
   activePage?: "templates" | "examples" | "guides" | "pricing";
   variant?: "landing" | "editor";
@@ -50,13 +50,16 @@ export default function TopNav({
           </Link>
         ))}
       </div>
-
+      <button onClick={saveResume} className="bg-amber-300">Save Resume</button>
       <Link
         href="/templates"
         className="bg-[#ab1f82] text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
       >
+      
         Create Resume
-      </Link>
+   
+         
+      </Link> 
     </nav>
   );
 }

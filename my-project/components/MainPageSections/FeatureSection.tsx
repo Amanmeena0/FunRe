@@ -72,6 +72,7 @@ export default function FeatureSection() {
             alt="Abstract vibrant purple and pink liquid swirl gradient"
             fill
             className="object-cover"
+            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 85vw, 80vw"
           />
         </div>
       </div>

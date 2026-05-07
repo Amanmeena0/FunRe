@@ -9,12 +9,12 @@ export interface TemplateCardData {
 }
 
 export interface FullTemplateCardData {
-  id: string;
-  title: string;
-  description: string;
+  id: TemplateCardData["id"];
+  title: TemplateCardData["title"];
+  description: TemplateCardData["description"];
   imageSrc: string;
   imageAlt: string;
-  badge: string;
+  badge: TemplateCardData["badge"];
   badgeClass: string;
   icon: string;
 }

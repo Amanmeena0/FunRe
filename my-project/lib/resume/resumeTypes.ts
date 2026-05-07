@@ -11,12 +11,12 @@ export interface ResumeData {
     github?: string
   }
   Summary: string;
-  Education: { institution: string; degree: string; dateRange: string };
+  Education: { institution: string; degree: string; dateRange: string }[];
   Experience: { companyName: string; jobTitle: string; dateRange: string }[];
-  Projects?: { name: string; description: string; link?: string }[];
+  Projects: { name: string; description: string; link?: string }[];
   Skills: string[];
-  Certifications?: string[];
-  Activities?: string[];
+  Certifications: string[];
+  Activities: string[];
 }
 
 export const defaultResumeData: ResumeData = {
@@ -30,17 +30,19 @@ export const defaultResumeData: ResumeData = {
   },
   Summary:
     "Visionary leader with a knack for turning chaos into opportunity. Expert in unconventional strategies and disruptive innovation. Passionate about creating work environments that thrive on unpredictability and fun.",
-  Education: {
-    institution: "DTU",
-    degree: "Bachelor of Science in Chaos Studies",
-    dateRange: "2020 - PRES"
-  },
+  Education: [
+    {
+      institution: "DTU",
+      degree: "Bachelor of Science in Chaos Studies",
+      dateRange: "2020 - PRES"
+    }
+  ],
   Experience: [
     {
       companyName: "Global Hegemony Inc.",
       jobTitle: "Chief Chaos Officer",
       dateRange: "2020 - PRES"
-    }
+    },
   ],
   Projects: [
     {
