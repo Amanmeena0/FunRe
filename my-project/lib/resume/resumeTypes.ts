@@ -19,43 +19,64 @@ export interface ResumeData {
   Activities: string[];
 }
 
+// default data for new resumes, can be used as a template for users to fill in their own information
 export const defaultResumeData: ResumeData = {
-  profilePhotoUrl: "Drive link",
+  profilePhotoUrl: "https://i.pravatar.cc/150?img=1",
   personalInfo: {
-    fullName: "Max Disruptor",
-    title: "Chief Chaos Officer",
-    email: "max.disruptor@example.com",
+    fullName: "John Anderson",
+    title: "Full Stack Developer",
+    email: "john.anderson@example.com",
     phone: "+1 (555) 123-4567",
-    location: "San Francisco, CA"
+    location: "San Francisco, CA",
+    website: "https://johnanderson.dev",
+    linkedin: "https://linkedin.com/in/johnanderson",
+    github: "https://github.com/johnanderson"
   },
   Summary:
-    "Visionary leader with a knack for turning chaos into opportunity. Expert in unconventional strategies and disruptive innovation. Passionate about creating work environments that thrive on unpredictability and fun.",
+    "Experienced Full Stack Developer with 5+ years of expertise in building scalable web applications. Proficient in React, Node.js, and cloud technologies. Passionate about clean code and mentoring junior developers.",
   Education: [
     {
-      institution: "DTU",
-      degree: "Bachelor of Science in Chaos Studies",
-      dateRange: "2020 - PRES"
+      institution: "Stanford University",
+      degree: "Bachelor of Science in Computer Science",
+      dateRange: "2016 - 2020"
+    },
+    {
+      institution: "Coursera",
+      degree: "AWS Solutions Architect Associate Certification",
+      dateRange: "2021"
     }
   ],
   Experience: [
     {
-      companyName: "Global Hegemony Inc.",
-      jobTitle: "Chief Chaos Officer",
-      dateRange: "2020 - PRES"
+      companyName: "Tech Innovators Inc.",
+      jobTitle: "Senior Full Stack Developer",
+      dateRange: "2022 - Present"
     },
+    {
+      companyName: "Digital Solutions Ltd.",
+      jobTitle: "Full Stack Developer",
+      dateRange: "2020 - 2022"
+    }
   ],
   Projects: [
     {
-      name: "Chaos Theory Implementation",
-      description: "Led the implementation of chaos theory principles in a corporate environment, resulting in increased employee engagement and productivity."
+      name: "E-commerce Platform",
+      description: "Built a full-stack e-commerce platform handling 10K+ daily transactions using React, Node.js, and PostgreSQL.",
+      link: "https://ecommerce-platform.example.com"
+    },
+    {
+      name: "Real-time Analytics Dashboard",
+      description: "Developed real-time dashboard for data visualization using WebSockets and D3.js"
     }
   ],
-  Skills: ["Chaos Management", "Disruptive Innovation", "Vibes-Based Leadership"],
+  Skills: ["React", "Node.js", "TypeScript", "PostgreSQL", "AWS", "Docker", "GraphQL"],
   Certifications: [
-    "Certified Chaos Management Professional"
+    "AWS Solutions Architect Associate",
+    "Docker Certified Associate"
   ],
   Activities: [
-    "Volunteer at the 'Chaos for Charity' event"
-  ],    
+    "Tech meetup organizer in San Francisco",
+    "Open source contributor to React ecosystem"
+  ]
   
 };

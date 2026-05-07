@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {saveResume} from "@/lib/resume/resumeService";
+
 interface TopNavProps {
   activePage?: "templates" | "examples" | "guides" | "pricing";
   variant?: "landing" | "editor";
@@ -19,6 +19,15 @@ export default function TopNav({
   ];
 
   const isEditor = variant === "editor";
+
+  // // This useEffect is just for testing the getResumes function and will be removed later
+  // useEffect(() => {
+  //   async function loadResumes() {
+  //     const resumes = await getResumes();
+  //     console.log("Fetched Resumes:", resumes);
+  //   }
+  //   loadResumes();
+  // }, []);
 
   return (
     <nav
@@ -50,7 +59,10 @@ export default function TopNav({
           </Link>
         ))}
       </div>
-      <button onClick={saveResume} className="bg-amber-300">Save Resume</button>
+
+      {/* This is button will remove after testing the mock data */}
+      {/* <button onClick={saveResume} className="bg-amber-300">Save Resume</button> */}
+
       <Link
         href="/templates"
         className="bg-[#ab1f82] text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
