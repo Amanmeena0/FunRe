@@ -1,7 +1,7 @@
 "use client";
 import MaterialIcon from "../ui/Materialcon";
 
-type EditorTab = "identity" | "experience" | "education" | "skills" | "finish";
+type EditorTab = "Profile" | "experience" | "education" | "skills" | "projects" | "finish";
 
 interface SideNavProps {
   activeTab: EditorTab;
@@ -9,9 +9,10 @@ interface SideNavProps {
 }
 
 const tabs: { key: EditorTab; label: string; icon: string }[] = [
-  { key: "identity", label: "Identity", icon: "person" },
-  { key: "experience", label: "Experience", icon: "work" },
+  { key: "Profile", label: "Profile", icon: "person" },
   { key: "education", label: "Education", icon: "school" },
+  { key: "experience", label: "Experience", icon: "work" },
+  { key: "projects", label: "Projects", icon: "folder" },
   { key: "skills", label: "Skills", icon: "construction" },
   { key: "finish", label: "Finish", icon: "check_circle" },
 ];

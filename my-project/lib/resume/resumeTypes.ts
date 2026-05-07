@@ -1,4 +1,6 @@
 export interface ResumeData {
+  
+  // profile section
   profilePhotoUrl?: string;
   personalInfo: {
     fullName: string
@@ -11,9 +13,17 @@ export interface ResumeData {
     github?: string
   }
   Summary: string;
+
+  // education sections
   Education: { institution: string; degree: string; dateRange: string }[];
+
+  // experience sections
   Experience: { companyName: string; jobTitle: string; dateRange: string }[];
+
+  // project sections
   Projects: { name: string; description: string; link?: string }[];
+
+  // SKills section
   Skills: string[];
   Certifications: string[];
   Activities: string[];
