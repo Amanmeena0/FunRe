@@ -4,7 +4,7 @@ import { ResumeData } from "@/lib/resume/resumeTypes";
 
 interface EducationProps {
   data: ResumeData["Education"];
-  onChange: (field: string, value: any) => void;
+  onChange: (field: string, value: unknown) => void;
 }
 
 export default function EducationSection({ data, onChange }: EducationProps) {
@@ -45,7 +45,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
                 value={edu.institution}
                 onChange={(e) => handleChange(index, "institution", e.target.value)}
                 placeholder="University of Hard Knocks"
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
               />
             </div>
             <div className="relative">
@@ -55,7 +55,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
                 value={edu.degree}
                 onChange={(e) => handleChange(index, "degree", e.target.value)}
                 placeholder="Master of Survival"
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors outline-none"
               />
             </div>
             <div className="relative">
@@ -65,7 +65,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
                 value={edu.dateRange}
                 onChange={(e) => handleChange(index, "dateRange", e.target.value)}
                 placeholder="2016 - 2020"
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
               />
             </div>
           </div>

@@ -4,7 +4,7 @@ import { ResumeData } from "@/lib/resume/resumeTypes";
 
 interface SkillsProps {
   data: ResumeData["Skills"];
-  onChange: (field: string, value: any) => void;
+  onChange: (field: string, value: unknown) => void;
 }
 
 export default function SkillsSection({ data, onChange }: SkillsProps) {
@@ -37,7 +37,7 @@ export default function SkillsSection({ data, onChange }: SkillsProps) {
               }
             }}
             placeholder="Type and press Enter (e.g., Chaos Management)"
-            className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
+            className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
           />
         </div>
         

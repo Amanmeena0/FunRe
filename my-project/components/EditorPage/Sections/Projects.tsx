@@ -4,7 +4,7 @@ import { ResumeData } from "@/lib/resume/resumeTypes";
 
 interface ProjectsProps {
   data: ResumeData["Projects"];
-  onChange: (field: string, value: any) => void;
+  onChange: (field: string, value: unknown) => void;
 }
 
 export default function ProjectsSection({ data, onChange }: ProjectsProps) {
@@ -45,7 +45,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
                 value={proj.name}
                 onChange={(e) => handleChange(index, "name", e.target.value)}
                 placeholder="World Domination App"
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-xl font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
               />
             </div>
             <div className="relative">
@@ -55,7 +55,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
                 onChange={(e) => handleChange(index, "description", e.target.value)}
                 placeholder="Briefly explain your masterpiece..."
                 rows={2}
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors resize-none outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors resize-none outline-none"
               />
             </div>
             <div className="relative">
@@ -65,7 +65,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
                 value={proj.link}
                 onChange={(e) => handleChange(index, "link", e.target.value)}
                 placeholder="https://..."
-                className="w-full bg-transparent border-0 border-b-[4px] border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
+                className="w-full bg-transparent border-0 border-b-4  border-black p-0 py-2 text-lg font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
               />
             </div>
           </div>
