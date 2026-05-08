@@ -36,8 +36,8 @@ export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) 
               onClick={() => onTabChange(tab.key)}
               className={`w-full flex items-center gap-4 px-6 py-4 font-medium border-b-2 transition-colors ${
                 isActive
-                  ? "bg-[#ff69C9] text-black font-black border-black"
-                  : "text-[#1b1b1b] dark:text-[#f9f9f9] hover:bg-[#fec700] hover:text-black border-black/10"
+                  ? "bg-[#ff69C9] text-black font-black border-y-2 border-black"
+                  : "text-[#1b1b1b] dark:text-[#f9f9f9] hover:bg-[#fec700] hover:text-black border-b-2 border-black/10"
               }`}
             >
               <MaterialIcon
