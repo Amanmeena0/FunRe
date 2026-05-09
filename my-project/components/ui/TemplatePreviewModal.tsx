@@ -22,7 +22,7 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
   if (!isOpen || !template) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8">
+    <div className="fixed inset-0 z-100 flex items-center justify-center p-4 md:p-8">
       {/* Backdrop */}
       <div 
         className="absolute inset-0 bg-black/80 backdrop-blur-sm cursor-pointer"
@@ -41,9 +41,9 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
         </button>
 
         {/* Left: Image Preview */}
-        <div className="w-full md:w-[60%] bg-surface-container border-b-4 md:border-b-0 md:border-r-4 border-black relative min-h-[300px] md:min-h-0 overflow-y-auto">
+        <div className="w-full md:w-[60%] bg-surface-container border-b-4 md:border-b-0 md:border-r-4 border-black relative min-h-75 md:min-h-0 overflow-y-auto">
           <div className="p-8">
-            <div className="relative aspect-[3/4] w-full border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+            <div className="relative aspect-3/4 w-full border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
               <Image
                 src={template.imageSrc}
                 alt={template.title}
