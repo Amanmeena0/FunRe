@@ -5,9 +5,9 @@ import { useParams } from "next/navigation";
 import EditorLayout from "@/components/EditorPage/EditorLayout";
 import EditorSideNav from "@/components/EditorPage/EditorsideNav";
 import EditorForm from "@/components/EditorPage/EditorForm";
+import ResumeMarks from "@/components/ResumeTemplates/shared/resumeMarks";
 import { ResumeData, defaultResumeData } from "@/lib/resume/resumeTypes";
-
-type EditorTab = "Profile" | "education" | "experience" | "skills" | "projects" | "finish";
+import { EditorTab } from "@/types/types";
 
 export default function EditorPage() {
   const { templateId } = useParams();
@@ -28,12 +28,8 @@ export default function EditorPage() {
       
       <EditorForm data={resumeData} onChange={handleDataChange} activeTab={activeTab} />
 
-      {/* Right Canvas: Live Rendering (Blank for now) */}
-      <section className="hidden lg:flex flex-col grow bg-surface-container relative overflow-hidden canvas-bg">
-        <div className="grow flex items-center justify-center p-12">
-          {/* Resume Preview will go here */}
-        </div>
-      </section>
+      {/* Right Canvas: Live Rendering */}
+      <ResumeMarks data={resumeData} />
     </EditorLayout>
   );
 }
