@@ -23,7 +23,7 @@ export default function EditorForm({ data, onChange, activeTab }: EditorFormProp
   };
 
   return (
-    <section className="w-full lg:w-[40%] ml-0 lg:ml-64 bg-surface-container-lowest border-r-4 border-black overflow-y-auto px-8 py-12 custom-scrollbar">
+    <section className="w-full lg:w-[40%] ml-0 lg:ml-64 bg-surface-container-lowest border-r-4 border-black overflow-y-auto px-8 py-12 custom-scrollbar print:hidden">
       <div className="max-w-xl mx-auto space-y-12">
         {activeTab === "Profile" && (
           <ProfileSection

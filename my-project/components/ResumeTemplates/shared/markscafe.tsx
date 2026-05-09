@@ -15,9 +15,9 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
   const { personalInfo, Experience, Education, Skills, Summary, profilePhotoUrl } = data;
 
   return (
-    <section className="hidden lg:flex flex-col grow bg-surface-container relative overflow-hidden canvas-bg">
+    <section className="hidden lg:flex flex-col grow bg-surface-container relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0">
       {/* Canvas Controls */}
-      <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20">
+      <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20 print:hidden">
         <div className="bg-white px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-xs uppercase flex gap-4">
           <span>A4 Vertical</span>
           <span className="text-primary">{zoom}% Zoom</span>
@@ -42,16 +42,17 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
       </div>
 
       {/* A4 Preview Container */}
-      <div className="grow flex items-center justify-center p-12 overflow-auto">
+      <div className="grow flex items-center justify-center p-12 overflow-auto print:p-0 print:block">
         <div
-          className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-body text-[#1b1b1b]"
+          className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-body text-[#1b1b1b] print:shadow-none print:m-0"
           style={{
             width: "210mm",
             height: "297mm",
-            transform: `scale(${zoom / 100})`,
+            transform: `scale(var(--zoom))`,
             transformOrigin: "center center",
             flexShrink: 0,
-          }}
+            "--zoom": zoom / 100
+          } as React.CSSProperties}
         >
           {/* Main Content Border wrapper for that thin inner line effect if any */}
           <div className="absolute inset-4 border border-black pointer-events-none opacity-20" />

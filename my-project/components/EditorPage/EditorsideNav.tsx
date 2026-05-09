@@ -18,7 +18,7 @@ const tabs: { key: EditorTab; label: string; icon: string }[] = [
 
 export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) {
   return (
-    <aside className="hidden lg:flex flex-col h-[calc(100vh-180px)] fixed left-0 top-24 w-64 bg-[#f9f9f9] dark:bg-[#1b1b1b] border-r-4 border-black z-40">
+    <aside className="hidden lg:flex flex-col h-[calc(100vh-180px)] fixed left-0 top-24 w-64 bg-[#f9f9f9] dark:bg-[#1b1b1b] border-r-4 border-black z-40 print:hidden">
       <div className="px-6 py-8 border-b-4 border-black">
         <h2 className="text-xl font-bold uppercase font-headline">EDITOR</h2>
         <p className="text-xs uppercase tracking-widest opacity-60">
@@ -52,7 +52,10 @@ export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) 
       </nav>
 
       <div className="p-6">
-        <button className="w-full bg-[#fec700] text-black font-black uppercase py-4 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+        <button 
+          onClick={() => window.print()}
+          className="w-full bg-[#fec700] text-black font-black uppercase py-4 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
+        >
           Download PDF
         </button>
       </div>

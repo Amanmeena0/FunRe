@@ -26,7 +26,7 @@ export default function EditorLayout({ children }: EditorLayoutProps) {
     <div className="bg-background text-on-background overflow-hidden">
       <TopNav variant="editor" />
 
-      <main className="flex h-screen pt-24 pb-20">
+      <main className="flex h-screen pt-24 pb-20 print:p-0 print:h-auto print:block">
         {children}
       </main>
 
