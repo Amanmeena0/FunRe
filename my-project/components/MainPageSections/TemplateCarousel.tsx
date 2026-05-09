@@ -11,6 +11,7 @@ const badgeStyles: Record<TemplateCardData["badgeVariant"], string> = {
   retro: "bg-[#fec700] border-2 border-black text-black",
   greasy: "bg-[#ab1f82] text-white border-2 border-black",
   legacy: "bg-black text-white border-2 border-white",
+  green: "bg-[#00B386] text-black border-2 border-black",
 };
 
 export default function TemplateCarousel() {

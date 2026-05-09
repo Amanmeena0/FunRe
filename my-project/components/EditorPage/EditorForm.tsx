@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 import { ResumeData } from "@/lib/resume/resumeTypes";
+import { EditorTab } from "@/types/types";
 import ProfileSection from "./Sections/ProfileSection";
 import ExperienceSection from "./Sections/Experience";
 import EducationSection from "./Sections/Education";
 import SkillsSection from "./Sections/Skills";
 import ProjectsSection from "./Sections/Projects";
-
-type EditorTab = "Profile" | "experience" | "education" | "skills" | "projects" | "finish";
 
 interface EditorFormProps {
   data: ResumeData;

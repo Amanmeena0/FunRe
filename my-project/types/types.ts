@@ -5,7 +5,7 @@ export interface TemplateCardData {
   imageSrc: string;
   imageAlt: string;
   badge: string;
-  badgeVariant: "retro" | "greasy" | "legacy";
+  badgeVariant: "retro" | "greasy" | "legacy" | "green";
 }
 
 export interface FullTemplateCardData {
@@ -18,3 +18,5 @@ export interface FullTemplateCardData {
   badgeClass: string;
   icon: string;
 }
+
+export type EditorTab = "Profile" | "experience" | "education" | "skills" | "projects" | "finish";

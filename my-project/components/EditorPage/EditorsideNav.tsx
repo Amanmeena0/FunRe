@@ -1,7 +1,6 @@
 "use client";
 import MaterialIcon from "../ui/Materialcon";
-
-type EditorTab = "Profile" | "experience" | "education" | "skills" | "projects" | "finish";
+import { EditorTab } from "@/types/types";
 
 interface SideNavProps {
   activeTab: EditorTab;
