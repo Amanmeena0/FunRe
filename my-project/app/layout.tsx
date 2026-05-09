@@ -27,6 +27,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`light ${spaceGrotesk.variable} ${workSans.variable}`}
+      suppressHydrationWarning
     >
       <body className="bg-background text-on-background">
         {children}

@@ -29,6 +29,22 @@ export interface ResumeData {
   Activities: string[];
 }
 
+export interface ResumeTemplate {
+  id: string;
+  name: string;
+  thumbnail: string;
+  component: React.ComponentType<{ data: ResumeData }>;
+  metadata?: {
+    category?: string;
+    description?: string;
+    badgeClass?: string;
+    badgeVariant?: string;
+    icon?: string;
+    imageAlt?: string;
+    [key: string]: any;
+  };
+}
+
 // default data for new resumes, can be used as a template for users to fill in their own information
 export const defaultResumeData: ResumeData = {
   profilePhotoUrl: "https://i.pravatar.cc/150?img=1",

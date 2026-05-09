@@ -1,15 +1,20 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import MaterialIcon from "./Materialcon";
 import { FullTemplateCardData } from "@/types/types";
 
 interface TemplateGridCardProps {
   template: FullTemplateCardData;
+  onSelect: (template: FullTemplateCardData) => void;
 }
 
-export default function TemplateGridCard({ template }: TemplateGridCardProps) {
+export default function TemplateGridCard({ template, onSelect }: TemplateGridCardProps) {
   return (
-    <div className="group flex flex-col bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden brutalist-card">
+    <div 
+      onClick={() => onSelect(template)}
+      className="group flex flex-col bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden brutalist-card cursor-pointer hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]"
+    >
       <div className="aspect-3/4 bg-surface-container overflow-hidden border-b-4 border-black relative">
         <Image
           src={template.imageSrc}
@@ -31,15 +36,14 @@ export default function TemplateGridCard({ template }: TemplateGridCardProps) {
           </h3>
           <MaterialIcon icon={template.icon} className="text-primary text-3xl" />
         </div>
-        <p className="text-sm font-medium mb-8 grow font-body">
+        <p className="text-sm font-medium mb-8 grow font-body text-gray-600">
           {template.description}
         </p>
-        <Link
-          href={`/editor/${template.id}`}
-          className="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-primary transition-colors text-center block active:translate-x-0.5 active:translate-y-0.5"
+        <button
+          className="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black group-hover:bg-primary transition-colors text-center block active:translate-x-0.5 active:translate-y-0.5"
         >
           Select Vibe
-        </Link>
+        </button>
       </div>
     </div>
   );

@@ -1,23 +1,32 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState } from "react";
 import TopNav from "@/components/layout/TopNav";
 import Footer from "@/components/layout/Footer";
 import TemplateGridCard from "@/components/ui/TemplateGridCard";
+import TemplatePreviewModal from "@/components/ui/TemplatePreviewModal";
 import { GRID_TEMPLATES } from "@/types/templateData";
-
-export const metadata: Metadata = {
-  title: "Resume Riot | Pick Your Weapon — Templates",
-  description:
-    "Choose a resume template that screams authority and disrupts the hiring manager's afternoon nap.",
-};
+import { FullTemplateCardData } from "@/types/types";
 
 /**
  * Templates Page - Route: /templates
  * 
- * Displays the full template catalog where users can browse and select
- * a template to use for their resume. After selection, they navigate to
- * /editor/[templateId] where they can customize their resume.
+ * Displays the full template catalog. Clicking a card opens a preview modal.
+ * The modal provides the final bridge to the editor.
  */
 export default function TemplatesPage() {
+  const [selectedTemplate, setSelectedTemplate] = useState<FullTemplateCardData | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleSelectTemplate = (template: FullTemplateCardData) => {
+    setSelectedTemplate(template);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <>
       <TopNav activePage="templates" />
@@ -38,10 +47,22 @@ export default function TemplatesPage() {
         {/* Template Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {GRID_TEMPLATES.map((template) => (
-            <TemplateGridCard key={template.id} template={template} />
+            <TemplateGridCard 
+              key={template.id} 
+              template={template} 
+              onSelect={handleSelectTemplate}
+            />
           ))}
         </div>
       </main>
+
+      {/* Bridge: Template Preview Modal */}
+      <TemplatePreviewModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+        template={selectedTemplate} 
+      />
+
       <Footer />
     </>
   );
