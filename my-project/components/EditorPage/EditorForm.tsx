@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ResumeData } from "@/lib/resume/resumeTypes";
+import { ResumeData } from "@/lib/resume/resumeData";
 import { EditorTab } from "@/types/types";
 import ProfileSection from "./Sections/ProfileSection";
 import ExperienceSection from "./Sections/Experience";

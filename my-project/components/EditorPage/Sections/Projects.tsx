@@ -1,6 +1,6 @@
 "use client";
 
-import { ResumeData } from "@/lib/resume/resumeTypes";
+import { ResumeData } from "@/lib/resume/resumeData";
 
 interface ProjectsProps {
   data: ResumeData["Projects"];

@@ -6,7 +6,7 @@ import EditorLayout from "@/components/EditorPage/EditorLayout";
 import EditorSideNav from "@/components/EditorPage/EditorsideNav";
 import EditorForm from "@/components/EditorPage/EditorForm";
 import ResumeMarks from "@/components/ResumeTemplates/shared/resumeMarks";
-import { ResumeData, defaultResumeData } from "@/lib/resume/resumeTypes";
+import { ResumeData, defaultResumeData } from "@/lib/resume/resumeData";
 import { EditorTab } from "@/types/types";
 
 export default function EditorPage() {

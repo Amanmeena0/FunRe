@@ -1,4 +1,4 @@
-import { defaultResumeData, ResumeData } from "./resumeTypes";
+import { defaultResumeData, ResumeData } from "./resumeData";
 
 export interface Resume {
   id: string;
