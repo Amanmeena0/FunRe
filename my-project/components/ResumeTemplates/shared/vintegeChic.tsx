@@ -137,6 +137,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
                             src={profilePhotoUrl} 
                             alt={personalInfo.fullName}
                             fill
+                            sizes="160px"
                             className="object-cover"
                           />
                         ) : (

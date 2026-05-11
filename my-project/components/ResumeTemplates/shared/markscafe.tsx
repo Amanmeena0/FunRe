@@ -106,6 +106,7 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
                       src={profilePhotoUrl} 
                       alt={personalInfo.fullName}
                       fill
+                      sizes="224px"
                       className="object-cover"
                     />
                   ) : (
