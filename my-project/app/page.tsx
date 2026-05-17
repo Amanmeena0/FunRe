@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <TopNav />
-      <main className="pt-24 pb-20">
+      <main >
         <HeroSection />
         <TemplateCarousel />
         <FeatureSection />
