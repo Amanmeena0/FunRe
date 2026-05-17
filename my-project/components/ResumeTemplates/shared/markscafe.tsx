@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import MaterialIcon from "../../ui/Materialcon";
 import { ResumeData } from "@/lib/resume/resumeData";
+import CanvasWrapper from "../../EditorPage/CanvasWrapper";
 
 interface ResumeCanvasProps {
   data: ResumeData;
@@ -15,45 +16,21 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
   const { personalInfo, Experience, Education, Skills, Summary, profilePhotoUrl } = data;
 
   return (
-    <section className="hidden lg:flex flex-col grow bg-surface-container relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0">
-      {/* Canvas Controls */}
-      <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20 print:hidden">
-        <div className="bg-white px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-xs uppercase flex gap-4">
-          <span>A4 Vertical</span>
-          <span className="text-primary">{zoom}% Zoom</span>
-          <span className="text-secondary">Template: &quot;Mark&quot;</span>
-        </div>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setZoom((z) => Math.min(z + 10, 150))}
-            aria-label="Zoom in"
-            className="p-2 bg-white border-2 border-black hover:bg-surface-container-low transition-colors"
-          >
-            <MaterialIcon icon="zoom_in" />
-          </button>
-          <button
-            onClick={() => setZoom((z) => Math.max(z - 10, 50))}
-            aria-label="Zoom out"
-            className="p-2 bg-white border-2 border-black hover:bg-surface-container-low transition-colors"
-          >
-            <MaterialIcon icon="zoom_out" />
-          </button>
-        </div>
-      </div>
-
-      {/* A4 Preview Container */}
-      <div className="grow flex items-center justify-center p-12 overflow-auto print:p-0 print:block">
-        <div
-          className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-body text-[#1b1b1b] print:shadow-none print:m-0"
-          style={{
-            width: "210mm",
-            height: "297mm",
-            transform: `scale(var(--zoom))`,
-            transformOrigin: "center center",
-            flexShrink: 0,
-            "--zoom": zoom / 100
-          } as React.CSSProperties}
-        >
+    <CanvasWrapper 
+      templateName="Mark Cafe" 
+      zoom={zoom} 
+      setZoom={setZoom}
+      controlsColor="text-primary"
+      canvasBgClass="bg-surface-container"
+    >
+      <div
+        className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-body text-[#1b1b1b] print:shadow-none print:m-0"
+        style={{
+          width: "210mm",
+          height: "297mm",
+          flexShrink: 0,
+        } as React.CSSProperties}
+      >
           {/* Main Content Border wrapper for that thin inner line effect if any */}
           <div className="absolute inset-4 border border-black pointer-events-none opacity-20" />
 
@@ -260,7 +237,6 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
           {/* Bottom Right Blob */}
           <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#1b1b1b] rounded-full" />
         </div>
-      </div>
-    </section>
+    </CanvasWrapper>
   );
 }

@@ -18,12 +18,21 @@ const tabs: { key: EditorTab; label: string; icon: string }[] = [
 
 export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) {
   return (
-    <aside className="hidden lg:flex flex-col h-[calc(100vh-180px)] fixed left-0 top-24 w-64 bg-[#f9f9f9] dark:bg-[#1b1b1b] border-r-4 border-black z-40 print:hidden">
-      <div className="px-6 py-8 border-b-4 border-black">
-        <h2 className="text-xl font-bold uppercase font-headline">EDITOR</h2>
-        <p className="text-xs uppercase tracking-widest opacity-60">
-          Draft v1.0
-        </p>
+    <aside className="hidden lg:flex flex-col h-screen fixed left-0 top-0 w-64 bg-[#f9f9f9] dark:bg-[#1b1b1b] border-r-4 border-black z-40 print:hidden">
+      <div className="px-6 py-10 border-b-4 border-black bg-[#fec700]">
+        <h1 className="text-2xl font-black uppercase font-headline leading-tight tracking-tighter text-black">
+          RESUME <br /> RIOT
+        </h1>
+        <div className="mt-2 flex items-center gap-2">
+          <span className="w-2 h-2 bg-red-600 rounded-full animate-pulse"></span>
+          <p className="text-[10px] font-black uppercase tracking-widest text-black">
+            EDITOR MODE
+          </p>
+        </div>
+      </div>
+
+      <div className="px-6 py-4 border-b-2 border-black/10 bg-black text-white">
+        <h2 className="text-xs font-bold uppercase font-headline">Navigation</h2>
       </div>
 
       <nav className="grow">
@@ -51,7 +60,7 @@ export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) 
         })}
       </nav>
 
-      <div className="p-6">
+      <div className="p-6 pb-24">
         <button 
           onClick={() => window.print()}
           className="w-full bg-[#fec700] text-black font-black uppercase py-4 border-4 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"

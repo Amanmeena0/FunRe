@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import MaterialIcon from "../../ui/Materialcon";
 import { ResumeData } from "@/lib/resume/resumeData";
+import CanvasWrapper from "../../EditorPage/CanvasWrapper";
 
 interface ResumeCanvasProps {
   data: ResumeData;
@@ -14,46 +15,26 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
   const { personalInfo, Experience, Education, Skills, Summary, profilePhotoUrl } = data;
 
   return (
-    <section className="hidden lg:flex flex-col grow bg-[#D2B48C] relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0">
-      {/* Canvas Controls */}
-      <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20 print:hidden">
-        <div className="bg-[#FFF8DC] px-4 py-2 border-2 border-[#5D4037] shadow-[4px_4px_0px_0px_rgba(93,64,55,1)] font-serif font-bold text-xs uppercase flex gap-4 text-[#5D4037]">
-          <span>Vintage Chic</span>
-          <span className="text-[#8B4513]">{zoom}% Zoom</span>
-        </div>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setZoom((z) => Math.min(z + 10, 150))}
-            aria-label="Zoom in"
-            className="p-2 bg-[#FFF8DC] border-2 border-[#5D4037] hover:bg-[#FAEBD7] transition-colors"
-          >
-            <MaterialIcon icon="zoom_in" className="text-[#5D4037]" />
-          </button>
-          <button
-            onClick={() => setZoom((z) => Math.max(z - 10, 50))}
-            aria-label="Zoom out"
-            className="p-2 bg-[#FFF8DC] border-2 border-[#5D4037] hover:bg-[#FAEBD7] transition-colors"
-          >
-            <MaterialIcon icon="zoom_out" className="text-[#5D4037]" />
-          </button>
-        </div>
-      </div>
+    <CanvasWrapper 
+      templateName="Vintage Chic" 
+      zoom={zoom} 
+      setZoom={setZoom}
+      controlsColor="text-[#8B4513]"
+      controlsBg="bg-[#FFF8DC]"
+      shadowColor="rgba(93,64,55,1)"
+      canvasBgClass="bg-[#D2B48C]"
+    >
+      <div
+        className="bg-[#FEF9E7] relative overflow-hidden flex flex-col font-serif text-[#3E2723] p-16 print:shadow-none print:m-0"
+        style={{
+          width: "210mm",
+          height: "297mm",
+          flexShrink: 0,
+          border: "20px solid #FFF8DC",
+          boxShadow: "inset 0 0 100px rgba(139, 69, 19, 0.1), 12px 12px 0px 0px rgba(62, 39, 35, 1)",
+        } as React.CSSProperties}
 
-      {/* A4 Preview Container */}
-      <div className="grow flex items-center justify-center p-12 overflow-auto print:p-0 print:block">
-        <div
-          className="bg-[#FEF9E7] relative overflow-hidden flex flex-col font-serif text-[#3E2723] p-16 print:shadow-none print:m-0"
-          style={{
-            width: "210mm",
-            height: "297mm",
-            transform: `scale(var(--zoom))`,
-            transformOrigin: "center center",
-            flexShrink: 0,
-            border: "20px solid #FFF8DC",
-            boxShadow: "inset 0 0 100px rgba(139, 69, 19, 0.1), 12px 12px 0px 0px rgba(62, 39, 35, 1)",
-            "--zoom": zoom / 100
-          } as React.CSSProperties}
-        >
+      >
           {/* Decorative Corner Ornaments (Simplified) */}
           <div className="absolute top-4 left-4 text-[#A1887F] opacity-40"><MaterialIcon icon="filter_vintage" size={40} /></div>
           <div className="absolute top-4 right-4 text-[#A1887F] opacity-40 rotate-90"><MaterialIcon icon="filter_vintage" size={40} /></div>
@@ -191,7 +172,6 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
           {/* Texture Overlay (Simulated) */}
           <div className="absolute inset-0 pointer-events-none opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/parchment.png')]"></div>
         </div>
-      </div>
-    </section>
+    </CanvasWrapper>
   );
 }

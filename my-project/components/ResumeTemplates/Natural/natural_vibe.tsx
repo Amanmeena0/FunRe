@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import MaterialIcon from "../../ui/Materialcon";
 import { ResumeData } from "@/lib/resume/resumeData";
+import CanvasWrapper from "../../EditorPage/CanvasWrapper";
 
 interface ResumeCanvasProps {
   data: ResumeData;
@@ -14,45 +15,21 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
   const { personalInfo, Experience, Education, Skills, Summary, profilePhotoUrl, Projects } = data;
 
   return (
-    <section className="hidden lg:flex flex-col grow bg-[#F0F2F5] relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0">
-      {/* Canvas Controls */}
-      <div className="absolute top-6 left-6 right-6 flex justify-between items-center z-20 print:hidden">
-        <div className="bg-white px-4 py-2 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] font-bold text-xs uppercase flex gap-4">
-          <span>Natural Vibe</span>
-          <span className="text-primary">{zoom}% Zoom</span>
-        </div>
-        <div className="flex gap-2">
-          <button
-            onClick={() => setZoom((z) => Math.min(z + 10, 150))}
-            aria-label="Zoom in"
-            className="p-2 bg-white border-2 border-black hover:bg-surface-container-low transition-colors"
-          >
-            <MaterialIcon icon="zoom_in" />
-          </button>
-          <button
-            onClick={() => setZoom((z) => Math.max(z - 10, 50))}
-            aria-label="Zoom out"
-            className="p-2 bg-white border-2 border-black hover:bg-surface-container-low transition-colors"
-          >
-            <MaterialIcon icon="zoom_out" />
-          </button>
-        </div>
-      </div>
-
+    <CanvasWrapper 
+      templateName="Natural Vibe" 
+      zoom={zoom} 
+      setZoom={setZoom}
+      controlsColor="text-[#319795]"
+    >
       {/* A4 Preview Container */}
-      <div className="grow flex items-center justify-center p-12 overflow-auto print:p-0 print:block">
-        <div
-          className="bg-[#FFFFFF] relative overflow-hidden flex flex-col font-sans text-[#2D3748] print:shadow-none print:m-0"
-          style={{
-            width: "210mm",
-            height: "297mm",
-            transform: `scale(var(--zoom))`,
-            transformOrigin: "center center",
-            flexShrink: 0,
-            boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
-            "--zoom": zoom / 100
-          } as React.CSSProperties}
-        >
+      <div
+        className="bg-[#FFFFFF] relative overflow-hidden flex flex-col font-sans text-[#2D3748] print:shadow-none print:m-0"
+        style={{
+          width: "210mm",
+          height: "297mm",
+          flexShrink: 0,
+        } as React.CSSProperties}
+      >
           {/* Main Layout - Two Columns */}
           <div className="flex h-full">
             {/* Left Sidebar - Natural Green Theme */}
@@ -211,7 +188,6 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
              <MaterialIcon icon="eco" size={400} />
           </div>
         </div>
-      </div>
-    </section>
+    </CanvasWrapper>
   );
 }
