@@ -31,10 +31,6 @@ export default function EditorSideNav({ activeTab, onTabChange }: SideNavProps) 
         </div>
       </div>
 
-      <div className="px-6 py-4 border-b-2 border-black/10 bg-black text-white">
-        <h2 className="text-xs font-bold uppercase font-headline">Navigation</h2>
-      </div>
-
       <nav className="grow">
         {tabs.map((tab) => {
           const isActive = activeTab === tab.key;
