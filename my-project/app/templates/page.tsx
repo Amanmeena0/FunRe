@@ -32,11 +32,7 @@ export default function TemplatesPage() {
       <TopNav activePage="templates" />
       
       <main 
-        className="pt-12 px-8 pb-32 relative overflow-hidden bg-[#f9f9f9]"
-        style={{
-          backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px)",
-          backgroundSize: "24px 24px",
-        }}
+        className="pt-12 px-8 pb-32 relative overflow-hidden bg-[#f9f9f9] bg-[radial-gradient(rgba(0,0,0,0.08)_1.5px,transparent_1.5px)] [background-size:24px_24px]"
       >
         {/* Glow Backdrop */}
         <div className="absolute top-20 right-0 w-[450px] h-[450px] bg-[#ffd8ea] rounded-full blur-[120px] opacity-40 pointer-events-none" />
