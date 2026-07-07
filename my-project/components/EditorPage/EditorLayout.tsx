@@ -12,7 +12,7 @@ export default function EditorLayout({ children }: EditorLayoutProps) {
     <div className="bg-background text-on-background overflow-hidden h-screen flex flex-col">
       <TopNav variant="editor" />
       
-      <main className="flex grow pt-[96px] pb-[72px] print:p-0 print:h-auto print:block overflow-hidden relative w-full">
+      <main className="flex grow pt-16 pb-14 print:p-0 print:h-auto print:block overflow-hidden relative w-full">
         {children}
       </main>
 

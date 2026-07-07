@@ -33,13 +33,15 @@ export default function TopNav({
     <nav
       className={`bg-[#f9f9f9] dark:bg-[#1b1b1b] flex justify-between items-center w-full px-8 ${
         isEditor 
-          ? "fixed top-0 left-0 h-[96px] z-[100] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]" 
+          ? "fixed top-0 left-0 h-16 z-[100] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" 
           : "sticky top-0 py-6 z-50"
       } border-b-4 border-black print:hidden`}
     >
       <Link
         href="/"
-        className="text-4xl font-black uppercase tracking-tighter text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-primary transition-colors"
+        className={`font-black uppercase tracking-tighter text-[#1b1b1b] dark:text-[#f9f9f9] hover:text-primary transition-colors ${
+          isEditor ? "text-2xl" : "text-4xl"
+        }`}
       >
         Resume Riot
       </Link>
