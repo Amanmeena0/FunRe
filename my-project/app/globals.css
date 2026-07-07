@@ -115,7 +115,14 @@
 @media print {
   @page {
     size: A4 portrait;
-    margin: 0;
+    margin-top: 15mm;
+    margin-bottom: 15mm;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  @page :first {
+    margin-top: 0;
   }
 
   html, body {
@@ -182,6 +189,12 @@
   .canvas-content-wrapper [class*="overflow-hidden"],
   .canvas-content-wrapper [class*="overflow-y-auto"] {
     overflow: visible !important;
+  }
+
+  .canvas-content-wrapper .break-inside-avoid,
+  .canvas-content-wrapper [class*="break-inside-avoid"] {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
   }
 
   .print\:hidden {
