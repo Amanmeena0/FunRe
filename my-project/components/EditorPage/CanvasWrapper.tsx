@@ -27,6 +27,7 @@ export default function CanvasWrapper({
   const [isPanning, setIsPanning] = useState(false);
   const [pos, setPos] = useState({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
   const onZoomIn = useCallback(() => setZoom((z) => Math.min(z + 10, 200)), [setZoom]);
   const onZoomOut = useCallback(() => setZoom((z) => Math.max(z - 10, 25)), [setZoom]);
@@ -128,6 +129,15 @@ export default function CanvasWrapper({
     };
   }, [fitToScreen]);
 
+  useEffect(() => {
+    if (!containerRef.current || !contentRef.current) return;
+
+    containerRef.current.style.cursor = isPanning ? "grabbing" : "grab";
+    contentRef.current.style.transform = `translate(${pos.x}px, ${pos.y}px) scale(${zoom / 100})`;
+    contentRef.current.style.transformOrigin = "center center";
+    contentRef.current.style.transition = isPanning ? "none" : "transform 0.1s ease-out";
+  }, [isPanning, pos.x, pos.y, zoom]);
+
   const resetView = () => {
     setPos({ x: 0, y: 0 });
     setZoom(100);
@@ -137,7 +147,6 @@ export default function CanvasWrapper({
     <section 
       ref={containerRef}
       className={`hidden lg:flex flex-col grow ${canvasBgClass} relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0 canvas-container group`}
-      style={{ cursor: isPanning ? "grabbing" : "grab" }}
       onMouseDown={onMouseDown}
     >
       {/* Canvas Controls */}
@@ -146,7 +155,7 @@ export default function CanvasWrapper({
           <span>{templateName}</span>
           <span className={controlsColor}>{zoom}% Zoom</span>
         </div>
-        <div className="flex gap-2 pointer-events-auto controls-panel" style={{ cursor: "default" }}>
+        <div className="flex gap-2 pointer-events-auto controls-panel cursor-default">
           <button
             onClick={fitToScreen}
             aria-label="Fit to screen"
@@ -185,11 +194,7 @@ export default function CanvasWrapper({
       {/* Canvas Content */}
       <div 
         className="grow flex items-center justify-center print:p-0 print:block pointer-events-none"
-        style={{
-          transform: `translate(${pos.x}px, ${pos.y}px) scale(${zoom / 100})`,
-          transformOrigin: "center center",
-          transition: isPanning ? "none" : "transform 0.1s ease-out"
-        }}
+        ref={contentRef}
       >
         <div className="pointer-events-auto shadow-2xl">
           {children}
