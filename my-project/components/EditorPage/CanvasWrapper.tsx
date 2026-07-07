@@ -146,7 +146,7 @@ export default function CanvasWrapper({
   return (
     <section 
       ref={containerRef}
-      className={`hidden lg:flex flex-col grow ${canvasBgClass} relative overflow-hidden canvas-bg print:flex print:bg-white print:overflow-visible print:p-0 canvas-container group`}
+      className={`hidden lg:flex flex-col grow ${canvasBgClass} relative overflow-hidden canvas-bg print:block print:bg-white print:overflow-visible print:p-0 canvas-container group`}
       onMouseDown={onMouseDown}
     >
       {/* Canvas Controls */}

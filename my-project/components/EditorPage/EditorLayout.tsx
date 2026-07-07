@@ -9,10 +9,10 @@ interface EditorLayoutProps {
 
 export default function EditorLayout({ children }: EditorLayoutProps) {
   return (
-    <div className="bg-background text-on-background overflow-hidden h-screen flex flex-col">
+    <div className="bg-background text-on-background overflow-hidden h-screen flex flex-col print:h-auto print:overflow-visible print:block print:bg-white print:p-0">
       <TopNav variant="editor" />
       
-      <main className="flex grow pt-16 pb-14 print:p-0 print:h-auto print:block overflow-hidden relative w-full">
+      <main className="flex grow pt-16 pb-14 print:p-0 print:h-auto print:block print:overflow-visible overflow-hidden relative w-full">
         {children}
       </main>
 

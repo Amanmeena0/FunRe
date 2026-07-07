@@ -42,7 +42,7 @@ export default function ExperienceSection({ data, onChange }: ExperienceProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Company Name</label>
               <input
                 type="text"
-                value={exp.companyName}
+                value={exp.companyName || ""}
                 onChange={(e) => handleChange(index, "companyName", e.target.value)}
                 placeholder="Global Hegemony Inc."
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
@@ -52,7 +52,7 @@ export default function ExperienceSection({ data, onChange }: ExperienceProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Job Title</label>
               <input
                 type="text"
-                value={exp.jobTitle}
+                value={exp.jobTitle || ""}
                 onChange={(e) => handleChange(index, "jobTitle", e.target.value)}
                 placeholder="Chief Chaos Officer"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-bold placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors outline-none"
@@ -62,7 +62,7 @@ export default function ExperienceSection({ data, onChange }: ExperienceProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Date Range</label>
               <input
                 type="text"
-                value={exp.dateRange}
+                value={exp.dateRange || ""}
                 onChange={(e) => handleChange(index, "dateRange", e.target.value)}
                 placeholder="2020 - Present"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"

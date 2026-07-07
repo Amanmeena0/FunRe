@@ -42,7 +42,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Institution</label>
               <input
                 type="text"
-                value={edu.institution}
+                value={edu.institution || ""}
                 onChange={(e) => handleChange(index, "institution", e.target.value)}
                 placeholder="University of Hard Knocks"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
@@ -52,7 +52,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Degree</label>
               <input
                 type="text"
-                value={edu.degree}
+                value={edu.degree || ""}
                 onChange={(e) => handleChange(index, "degree", e.target.value)}
                 placeholder="Master of Survival"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-bold placeholder:opacity-20 focus:ring-0 focus:border-secondary transition-colors outline-none"
@@ -62,7 +62,7 @@ export default function EducationSection({ data, onChange }: EducationProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Date Range</label>
               <input
                 type="text"
-                value={edu.dateRange}
+                value={edu.dateRange || ""}
                 onChange={(e) => handleChange(index, "dateRange", e.target.value)}
                 placeholder="2016 - 2020"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"

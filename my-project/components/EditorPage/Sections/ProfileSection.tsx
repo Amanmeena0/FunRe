@@ -78,7 +78,20 @@ export default function ProfileSection({ data, summary, profilePhotoUrl, onChang
                 </button>
               )}
             </div>
-            <span className="block text-[9px] font-bold text-black/60 uppercase">Max size 2MB (JPG/PNG)</span>
+            <div className="mt-2 flex flex-col gap-1">
+              <span className="block text-[9px] font-bold text-black/60 uppercase">Or Paste/Edit Image URL</span>
+              <input
+                type="text"
+                value={profilePhotoUrl?.startsWith("data:") ? "[Local Image File]" : (profilePhotoUrl || "")}
+                onChange={(e) => {
+                  const val = e.target.value;
+                  onChange("profilePhotoUrl", val === "[Local Image File]" ? profilePhotoUrl : val);
+                }}
+                placeholder="https://example.com/avatar.jpg"
+                className="w-full bg-white border-2 border-black text-xs font-bold px-2 py-1.5 outline-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:border-[#ff69c9] focus:shadow-none transition-all placeholder:text-black/30"
+              />
+            </div>
+            <span className="block text-[9px] font-bold text-black/60 uppercase">Max size 2MB (JPG/PNG) or any web URL</span>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

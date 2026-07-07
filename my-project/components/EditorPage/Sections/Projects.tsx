@@ -42,7 +42,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Project Name</label>
               <input
                 type="text"
-                value={proj.name}
+                value={proj.name || ""}
                 onChange={(e) => handleChange(index, "name", e.target.value)}
                 placeholder="World Domination App"
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-bold placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"
@@ -51,7 +51,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
             <div className="relative">
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Description</label>
               <textarea
-                value={proj.description}
+                value={proj.description || ""}
                 onChange={(e) => handleChange(index, "description", e.target.value)}
                 placeholder="Briefly explain your masterpiece..."
                 rows={2}
@@ -62,7 +62,7 @@ export default function ProjectsSection({ data, onChange }: ProjectsProps) {
               <label className="block font-headline font-bold text-xs uppercase mb-0.5">Link (Optional)</label>
               <input
                 type="text"
-                value={proj.link}
+                value={proj.link || ""}
                 onChange={(e) => handleChange(index, "link", e.target.value)}
                 placeholder="https://..."
                 className="w-full bg-transparent border-0 border-b-2 border-black p-0 py-1 text-sm font-medium placeholder:opacity-20 focus:ring-0 focus:border-primary transition-colors outline-none"

@@ -31,11 +31,11 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
         } as React.CSSProperties}
       >
           {/* Main Layout - Two Columns */}
-          <div className="flex min-h-[297mm] grow">
+          <div className="flex min-h-[297mm] grow natural-vibe-layout">
             {/* Left Sidebar - Natural Green Theme */}
-            <div className="w-[35%] bg-[#E6FFFA] h-full flex flex-col border-r border-[#B2F5EA]">
+            <div className="w-[35%] bg-[#E6FFFA] h-full flex flex-col border-r border-[#B2F5EA] natural-vibe-sidebar">
               {/* Profile Image Section */}
-              <div className="p-10 flex flex-col items-center">
+              <div className="p-6 flex flex-col items-center">
                 <div className="w-40 h-40 rounded-full border-4 border-[#319795] overflow-hidden bg-[#CBD5E0] relative mb-6 shadow-md">
                   {profilePhotoUrl ? (
                     <Image 
@@ -61,8 +61,8 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
               </div>
 
               {/* Contact Information */}
-              <div className="px-8 py-6 space-y-4">
-                <h2 className="text-xs font-black text-[#285E61] uppercase tracking-[0.2em] border-b-2 border-[#81E6D9] pb-2 mb-4">
+              <div className="px-6 py-4 space-y-3">
+                <h2 className="text-xs font-black text-[#285E61] uppercase tracking-[0.2em] border-b-2 border-[#81E6D9] pb-1.5 mb-3">
                   Contact
                 </h2>
                 <div className="space-y-3">
@@ -88,8 +88,8 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
               </div>
 
               {/* Skills Section */}
-              <div className="px-8 py-6 grow">
-                <h2 className="text-xs font-black text-[#285E61] uppercase tracking-[0.2em] border-b-2 border-[#81E6D9] pb-2 mb-4">
+              <div className="px-6 py-4 grow">
+                <h2 className="text-xs font-black text-[#285E61] uppercase tracking-[0.2em] border-b-2 border-[#81E6D9] pb-1.5 mb-3">
                   Expertise
                 </h2>
                 <div className="flex flex-wrap gap-2">
@@ -108,7 +108,7 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
             </div>
 
             {/* Right Main Content */}
-            <div className="w-[65%] p-12 flex flex-col gap-10">
+            <div className="w-[65%] p-8 flex flex-col gap-6">
               {/* Professional Summary */}
               <section className="space-y-4">
                 <div className="flex items-center gap-2">
@@ -121,14 +121,14 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
               </section>
 
               {/* Experience */}
-              <section className="space-y-6">
+              <section className="space-y-4">
                 <div className="flex items-center gap-2">
                    <MaterialIcon icon="work_outline" size={20} className="text-[#319795]" />
                    <h2 className="text-lg font-black text-[#2D3748] uppercase tracking-widest">Experience</h2>
                 </div>
-                <div className="space-y-8">
+                <div className="space-y-4">
                   {Experience.map((exp, idx) => (
-                    <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-[#319795] before:rounded-full">
+                    <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:bg-[#319795] before:rounded-full break-inside-avoid">
                       <div className="flex justify-between items-baseline mb-1">
                         <h3 className="font-bold text-[#2D3748] text-base">{exp.jobTitle}</h3>
                         <span className="text-[10px] font-black text-[#4FD1C5] bg-[#E6FFFA] px-2 py-0.5 rounded uppercase tracking-tighter">
@@ -145,14 +145,14 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
               </section>
 
               {/* Education */}
-              <section className="space-y-6">
+              <section className="space-y-4">
                 <div className="flex items-center gap-2">
                    <MaterialIcon icon="school" size={20} className="text-[#319795]" />
                    <h2 className="text-lg font-black text-[#2D3748] uppercase tracking-widest">Education</h2>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {Education.map((edu, idx) => (
-                    <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:border-2 before:border-[#319795] before:rounded-full">
+                    <div key={idx} className="relative pl-6 before:content-[''] before:absolute before:left-0 before:top-1.5 before:w-2 before:h-2 before:border-2 before:border-[#319795] before:rounded-full break-inside-avoid">
                       <div className="flex justify-between items-baseline mb-1">
                         <h3 className="font-bold text-[#2D3748] text-sm">{edu.institution}</h3>
                         <span className="text-[10px] font-bold text-[#A0AEC0]">{edu.dateRange}</span>
@@ -172,7 +172,7 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
                   </div>
                   <div className="grid grid-cols-1 gap-4">
                     {Projects.slice(0, 2).map((project, idx) => (
-                      <div key={idx} className="bg-[#F7FAFC] p-4 border border-[#EDF2F7] rounded-lg">
+                      <div key={idx} className="bg-[#F7FAFC] p-4 border border-[#EDF2F7] rounded-lg break-inside-avoid">
                         <h4 className="font-bold text-sm text-[#2D3748] mb-1">{project.name}</h4>
                         <p className="text-xs text-[#718096] line-clamp-2">{project.description}</p>
                       </div>

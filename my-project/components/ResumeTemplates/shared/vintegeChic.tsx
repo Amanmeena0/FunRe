@@ -140,9 +140,9 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
                 </svg>
               </div>
 
-              <div className="flex flex-col md:flex-row gap-8 items-start mt-4">
+              <div className="flex flex-col md:flex-row print:flex-row gap-8 items-start mt-4">
                 {/* Profile Picture */}
-                <div className="w-full md:w-1/3 relative shrink-0 z-10">
+                <div className="w-full md:w-1/3 print:w-1/3 relative shrink-0 z-10">
                   <div className="polaroid">
                     <div className="relative w-full aspect-square border border-gray-200">
                        {profilePhotoUrl ? (
@@ -163,7 +163,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
                 </div>
 
                 {/* Bio & Contact */}
-                <div className="w-full md:w-2/3">
+                <div className="w-full md:w-2/3 print:w-2/3">
                   <h2 className="heading-font text-5xl md:text-6xl font-black mb-4 text-black uppercase">{personalInfo.fullName}</h2>
                   <p className="text-black leading-relaxed font-medium mb-8 text-justify line-clamp-4">
                     {Summary || "Passionate professional dedicated to fostering positive environments and driving organizational success. Expertise in various functions, including strategic planning and performance management."}
@@ -201,7 +201,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
             </section>
 
             {/* Main Content Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10 p-8 md:p-12 border-t border-black grow">
+            <div className="grid grid-cols-1 md:grid-cols-2 print:grid-cols-2 gap-x-12 gap-y-10 p-8 md:p-12 border-t border-black grow">
               
               {/* Left Column */}
               <div className="flex flex-col gap-16">
@@ -213,7 +213,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
                   </div>
                   <div className="flex flex-col gap-6">
                     {Experience.slice(0,3).map((exp, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="break-inside-avoid">
                         <p className="italic text-sm mb-1">{exp.dateRange}</p>
                         <h3 className="heading-font text-xl text-black">{exp.jobTitle}</h3>
                         <p className="font-bold text-black">{exp.companyName}</p>
@@ -230,7 +230,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
                   </div>
                   <div className="flex flex-col gap-4">
                      {Education.slice(0,2).map((edu, idx) => (
-                      <div key={idx}>
+                      <div key={idx} className="break-inside-avoid">
                         <p className="italic text-sm mb-1">{edu.dateRange}</p>
                         <h3 className="heading-font text-xl text-black">{edu.institution}</h3>
                         <p className="font-bold text-black">{edu.degree}</p>
@@ -309,7 +309,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
             </div>
 
             {/* Footer Section */}
-            <div className="ticker mt-auto shrink-0">
+            <div className="ticker mt-auto shrink-0 print:hidden">
               <span>Portfolio</span><span>Portfolio</span><span>Portfolio</span><span>Portfolio</span><span>Portfolio</span><span>Portfolio</span><span>Portfolio</span>
             </div>
             
