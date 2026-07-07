@@ -24,7 +24,7 @@ export default function ResumeMarks({ data }: ResumeCanvasProps) {
       canvasBgClass="bg-surface-container"
     >
       <div
-        className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-mono text-[#1b1b1b] print:shadow-none print:m-0 w-[210mm] h-[297mm] shrink-0">
+        className="bg-[#f5f2e8] border-2 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] relative overflow-hidden flex flex-col font-mo text-[#1b1b1b] print:shadow-none print:m-0 w-[210mm] min-h-[297mm] shrink-0">
 
         {/* Top Header Section */}
         <div className="flex justify-center items-center pt-10 pb-6 px-12 border-b-2 border-black">

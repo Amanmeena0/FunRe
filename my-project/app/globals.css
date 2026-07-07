@@ -113,10 +113,75 @@
 }
 
 @media print {
-  body {
-    background: white !important;
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html, body {
     margin: 0 !important;
     padding: 0 !important;
+    width: 210mm !important;
+    height: auto !important;
+    min-height: 100% !important;
+    overflow: visible !important;
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Reset layout wrappers and parent containers for printing */
+  #__next,
+  body > div,
+  main,
+  .canvas-container {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: white !important;
+  }
+
+  /* Allow the canvas wrapper to flow naturally in multi-page documents */
+  .canvas-content-wrapper {
+    transform: none !important;
+    display: block !important;
+    position: relative !important;
+    width: 210mm !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Target direct child of the canvas wrapper (the template outer container) */
+  .canvas-content-wrapper > div {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 210mm !important;
+    height: auto !important;
+    min-height: 297mm !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* Reset fixed heights and hidden overflows for all content elements when printing */
+  .canvas-content-wrapper [class*="h-full"],
+  .canvas-content-wrapper [class*="h-[297mm]"] {
+    height: auto !important;
+    min-height: 100% !important;
+  }
+
+  .canvas-content-wrapper [class*="overflow-hidden"],
+  .canvas-content-wrapper [class*="overflow-y-auto"] {
+    overflow: visible !important;
   }
 
   .print\:hidden {

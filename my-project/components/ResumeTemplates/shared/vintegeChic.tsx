@@ -28,7 +28,7 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
         className="font-sans relative overflow-hidden flex flex-col p-0 print:shadow-none print:m-0"
         style={{
           width: "210mm",
-          height: "297mm",
+          minHeight: "297mm",
           flexShrink: 0,
         } as React.CSSProperties}
       >
@@ -42,7 +42,8 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
             border: 4px solid #000;
             position: relative;
             box-shadow: 10px 10px 0px #000;
-            height: 100%;
+            min-height: 100%;
+            flex-grow: 1;
             display: flex;
             flex-direction: column;
           }
@@ -110,6 +111,11 @@ export default function VintageChicTemplate({ data }: ResumeCanvasProps) {
               height: 100%;
               background-color: #00E676;
               border-right: 3px solid #000;
+          }
+          @media print {
+            .vintage-chic-wrapper {
+              box-shadow: none !important;
+            }
           }
           `
         }} />

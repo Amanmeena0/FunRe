@@ -26,12 +26,12 @@ export default function NaturalVibeTemplate({ data }: ResumeCanvasProps) {
         className="bg-[#FFFFFF] relative overflow-hidden flex flex-col font-sans text-[#2D3748] print:shadow-none print:m-0"
         style={{
           width: "210mm",
-          height: "297mm",
+          minHeight: "297mm",
           flexShrink: 0,
         } as React.CSSProperties}
       >
           {/* Main Layout - Two Columns */}
-          <div className="flex h-full">
+          <div className="flex min-h-[297mm] grow">
             {/* Left Sidebar - Natural Green Theme */}
             <div className="w-[35%] bg-[#E6FFFA] h-full flex flex-col border-r border-[#B2F5EA]">
               {/* Profile Image Section */}

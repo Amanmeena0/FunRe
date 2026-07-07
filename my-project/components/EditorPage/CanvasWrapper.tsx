@@ -193,16 +193,16 @@ export default function CanvasWrapper({
 
       {/* Canvas Content */}
       <div 
-        className="grow flex items-center justify-center print:p-0 print:block pointer-events-none"
+        className="canvas-content-wrapper grow flex items-center justify-center print:p-0 print:block pointer-events-none"
         ref={contentRef}
       >
-        <div className="pointer-events-auto shadow-2xl">
+        <div className="pointer-events-auto shadow-2xl print:shadow-none">
           {children}
         </div>
       </div>
 
       {/* Panning hint */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/75 text-white text-[10px] px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none uppercase tracking-widest font-bold shadow-lg border border-white/10">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-black/75 text-white text-[10px] px-3 py-1.5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none uppercase tracking-widest font-bold shadow-lg border border-white/10 print:hidden">
         Drag Canvas to Pan • Ctrl+Scroll or Trackpad Pinch to Zoom
       </div>
     </section>
