@@ -13,7 +13,7 @@ export default function EditorFooter() {
   };
 
   return (
-    <footer className="fixed bottom-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-[#1b1b1b] dark:bg-black border-t-4 border-black print:hidden">
+    <footer className="fixed bottom-0 left-0 w-full h-[72px] z-[100] flex justify-between items-center px-8 py-4 bg-[#1b1b1b] dark:bg-black border-t-4 border-black print:hidden">
       <div className="flex items-center gap-6">
         <span className="text-[#fec700] font-headline text-xs font-bold uppercase tracking-widest hidden md:inline">
           © 2024 RESUME RIOT. NO MERCY.

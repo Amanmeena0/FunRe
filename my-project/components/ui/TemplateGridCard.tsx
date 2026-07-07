@@ -13,7 +13,7 @@ export default function TemplateGridCard({ template, onSelect }: TemplateGridCar
   return (
     <div 
       onClick={() => onSelect(template)}
-      className="group flex flex-col bg-white border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] transition-all overflow-hidden brutalist-card cursor-pointer hover:-translate-y-1 hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]"
+      className="group flex flex-col bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,105,201,1)] transition-all duration-150 overflow-hidden brutalist-card cursor-pointer hover:-translate-y-1.5 hover:-translate-x-0.5 hover:shadow-[12px_12px_0px_0px_rgba(254,199,0,1)]"
     >
       <div className="aspect-3/4 bg-surface-container overflow-hidden border-b-4 border-black relative">
         <Image
@@ -31,16 +31,18 @@ export default function TemplateGridCard({ template, onSelect }: TemplateGridCar
       </div>
       <div className="p-6 flex flex-col grow">
         <div className="flex justify-between items-start mb-4">
-          <h3 className="text-3xl font-black uppercase tracking-tight font-headline">
+          <h3 className="text-3xl font-black uppercase tracking-tight font-headline text-black">
             {template.title}
           </h3>
-          <MaterialIcon icon={template.icon} className="text-primary text-3xl" />
+          <div className="text-[#ab1f82] group-hover:text-[#ff69c9] transition-colors duration-150">
+            <MaterialIcon icon={template.icon} className="text-3xl" />
+          </div>
         </div>
-        <p className="text-sm font-medium mb-8 grow font-body text-gray-600">
+        <p className="text-sm font-body mb-8 grow text-gray-700">
           {template.description}
         </p>
         <button
-          className="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black group-hover:bg-primary transition-colors text-center block active:translate-x-0.5 active:translate-y-0.5"
+          className="w-full bg-black text-white py-4 font-black uppercase tracking-widest text-lg border-2 border-black hover:bg-[#fec700] hover:text-black hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-0.5 transition-all text-center block active:translate-x-0 active:translate-y-0 active:shadow-none"
         >
           Select Vibe
         </button>

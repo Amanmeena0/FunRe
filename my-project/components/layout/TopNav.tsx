@@ -31,11 +31,11 @@ export default function TopNav({
 
   return (
     <nav
-      className={`bg-[#f9f9f9] dark:bg-[#1b1b1b] flex justify-between items-center w-full px-8 py-6 ${
-        isEditor ? "fixed top-0 z-100" : "sticky top-0"
-      } border-b-4 border-black ${
-        isEditor ? "shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]" : ""
-      } z-50 print:hidden`}
+      className={`bg-[#f9f9f9] dark:bg-[#1b1b1b] flex justify-between items-center w-full px-8 ${
+        isEditor 
+          ? "fixed top-0 left-0 h-[96px] z-[100] shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]" 
+          : "sticky top-0 py-6 z-50"
+      } border-b-4 border-black print:hidden`}
     >
       <Link
         href="/"
@@ -63,15 +63,7 @@ export default function TopNav({
       {/* This is button will remove after testing the mock data */}
       {/* <button onClick={saveResume} className="bg-amber-300">Save Resume</button> */}
 
-      <Link
-        href="/templates"
-        className="bg-[#ab1f82] text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all uppercase font-label hover:bg-[#890066]"
-      >
-      
-        Create Resume
-   
-         
-      </Link> 
+
     </nav>
   );
 }

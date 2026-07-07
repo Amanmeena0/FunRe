@@ -34,7 +34,7 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
         {/* Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 bg-white border-2 border-black p-2 hover:bg-primary transition-colors"
+          className="absolute top-4 right-4 z-10 bg-white border-2 border-black p-2 hover:bg-[#ff69c9] hover:text-black transition-colors cursor-pointer"
           aria-label="Close modal"
         >
           <MaterialIcon icon="close" />
@@ -43,7 +43,7 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
         {/* Left: Image Preview */}
         <div className="w-full md:w-[60%] bg-surface-container border-b-4 md:border-b-0 md:border-r-4 border-black relative min-h-75 md:min-h-0 overflow-y-auto">
           <div className="p-8">
-            <div className="relative aspect-3/4 w-full border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] overflow-hidden">
+            <div className="relative aspect-3/4 w-full border-4 border-black shadow-[8px_8px_0px_0px_rgba(255,105,201,1)] overflow-hidden">
               <Image
                 src={template.imageSrc}
                 alt={template.title}
@@ -61,32 +61,34 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
                <div className={`${template.badgeClass} px-3 py-1 font-black text-xs uppercase border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]`}>
                  {template.badge}
                </div>
-               <MaterialIcon icon={template.icon} className="text-primary text-2xl" />
+               <div className="text-[#ab1f82]">
+                 <MaterialIcon icon={template.icon} className="text-2xl" />
+               </div>
             </div>
 
-            <h2 className="text-5xl font-black uppercase tracking-tighter leading-none mb-6 font-headline">
+            <h2 className="text-5xl font-black uppercase tracking-tighter leading-none mb-6 font-headline text-black">
               {template.title}
             </h2>
             
-            <p className="text-lg font-medium leading-relaxed mb-8 font-body text-gray-700">
+            <p className="text-lg font-body leading-relaxed mb-8 text-gray-700">
               {template.description}
             </p>
 
             <div className="space-y-4 mb-8">
-               <div className="flex items-center gap-3 font-bold text-sm">
-                 <div className="bg-green-100 p-1 border border-black rounded-full">
+               <div className="flex items-center gap-3 font-bold text-sm text-black">
+                 <div className="bg-[#00B386] p-1 border-2 border-black rounded-full text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                    <MaterialIcon icon="check" size={16} />
                  </div>
                  ATS Compatible Layout
                </div>
-               <div className="flex items-center gap-3 font-bold text-sm">
-                 <div className="bg-green-100 p-1 border border-black rounded-full">
+               <div className="flex items-center gap-3 font-bold text-sm text-black">
+                 <div className="bg-[#00B386] p-1 border-2 border-black rounded-full text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                    <MaterialIcon icon="check" size={16} />
                  </div>
                  Universal Editor Support
                </div>
-               <div className="flex items-center gap-3 font-bold text-sm">
-                 <div className="bg-green-100 p-1 border border-black rounded-full">
+               <div className="flex items-center gap-3 font-bold text-sm text-black">
+                 <div className="bg-[#00B386] p-1 border-2 border-black rounded-full text-white shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center">
                    <MaterialIcon icon="check" size={16} />
                  </div>
                  Fully Responsive Design
@@ -96,7 +98,7 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
 
           <Link
             href={`/editor/${template.id}`}
-            className="w-full bg-black text-white py-5 font-black uppercase tracking-widest text-xl border-4 border-black hover:bg-primary transition-all text-center block active:translate-x-1 active:translate-y-1 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
+            className="w-full bg-[#fec700] text-black py-5 font-black uppercase tracking-widest text-xl border-4 border-black hover:bg-[#ff69c9] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none transition-all text-center block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           >
             Start Editing
           </Link>

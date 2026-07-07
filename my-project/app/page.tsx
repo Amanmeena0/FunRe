@@ -9,13 +9,13 @@ export default function HomePage() {
   return (
     <>
       <TopNav />
-      <main className="pb-20">
+      <main className="pb-0">
         <HeroSection />
         <TemplateCarousel />
         <FeatureSection />
         <CTASection />
       </main>
-      <Footer />
+      <Footer fixed={false} />
     </>
   );
 }

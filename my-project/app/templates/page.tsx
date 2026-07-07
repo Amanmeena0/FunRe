@@ -30,29 +30,51 @@ export default function TemplatesPage() {
   return (
     <>
       <TopNav activePage="templates" />
-      <main className="pt-40 px-8 max-w-7xl mx-auto pb-32">
-        {/* Hero Section */}
-        <div className="mb-20">
-          <h1 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-6 font-headline">
-            Pick Your{" "}
-            <span className="text-primary italic">Weapon</span>
-          </h1>
-          <p className="text-xl max-w-2xl font-medium leading-relaxed font-body">
-            Standard resumes are for standard people. Choose a template that
-            screams authority and disrupts the hiring manager&apos;s afternoon
-            nap.
-          </p>
-        </div>
+      
+      <main 
+        className="pt-12 px-8 pb-32 relative overflow-hidden bg-[#f9f9f9]"
+        style={{
+          backgroundImage: "radial-gradient(rgba(0, 0, 0, 0.08) 1.5px, transparent 1.5px)",
+          backgroundSize: "24px 24px",
+        }}
+      >
+        {/* Glow Backdrop */}
+        <div className="absolute top-20 right-0 w-[450px] h-[450px] bg-[#ffd8ea] rounded-full blur-[120px] opacity-40 pointer-events-none" />
+        <div className="absolute bottom-20 left-0 w-[350px] h-[350px] bg-[#ffd6a5] rounded-full blur-[100px] opacity-35 pointer-events-none" />
 
-        {/* Template Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {GRID_TEMPLATES.map((template) => (
-            <TemplateGridCard 
-              key={template.id} 
-              template={template} 
-              onSelect={handleSelectTemplate}
-            />
-          ))}
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Hero Section */}
+          <div className="mb-20">
+            <div className="flex flex-wrap gap-3 mb-6">
+              <span className="bg-[#ab1f82] text-white px-3 py-1 font-black text-xs uppercase tracking-widest border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                ARMORY v1.0
+              </span>
+              <span className="bg-[#fec700] text-black px-3 py-1 font-black text-xs uppercase tracking-widest border-2 border-black rotate-[-1deg] shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
+                ⚠️ SEVERELY ATS TESTED
+              </span>
+            </div>
+
+            <h1 className="text-7xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-6 font-headline text-black">
+              Pick Your{" "}
+              <span className="text-[#ff69c9] italic">Weapon</span>
+            </h1>
+            <p className="text-xl max-w-2xl font-medium leading-relaxed font-body text-gray-800">
+              Standard resumes are for standard people. Choose a template that
+              screams authority and disrupts the hiring manager&apos;s afternoon
+              nap.
+            </p>
+          </div>
+
+          {/* Template Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {GRID_TEMPLATES.map((template) => (
+              <TemplateGridCard 
+                key={template.id} 
+                template={template} 
+                onSelect={handleSelectTemplate}
+              />
+            ))}
+          </div>
         </div>
       </main>
 
@@ -63,7 +85,7 @@ export default function TemplatesPage() {
         template={selectedTemplate} 
       />
 
-      <Footer />
+      <Footer fixed={false} />
     </>
   );
 }
