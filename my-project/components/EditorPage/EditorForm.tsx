@@ -29,6 +29,7 @@ export default function EditorForm({ data, onChange, activeTab }: EditorFormProp
           <ProfileSection
             data={data.personalInfo}
             summary={data.Summary}
+            profilePhotoUrl={data.profilePhotoUrl}
             onChange={handleSectionChange}
           />
         )}
