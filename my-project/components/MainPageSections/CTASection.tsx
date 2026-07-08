@@ -33,12 +33,6 @@ export default function CTASection() {
           >
             CHOOSE A TEMPLATE
           </Link>
-          <Link
-            href="/examples"
-            className="bg-white text-black font-black text-2xl px-12 py-6 border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] active:translate-y-1 active:translate-x-1 active:shadow-none transition-all font-headline uppercase"
-          >
-            SEE EXAMPLES
-          </Link>
         </div>
       </div>
     </section>

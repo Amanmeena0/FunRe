@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { GithubNavbarButton } from "./GithubContributionWidget";
 
 interface TopNavProps {
   activePage?: "templates" | "examples" | "guides" | "pricing";
@@ -13,9 +14,7 @@ export default function TopNav({
 }: TopNavProps) {
   const navLinks = [
     { href: "/templates", label: "Templates", key: "templates" as const },
-    { href: "/examples", label: "Examples", key: "examples" as const },
     { href: "/guides", label: "Guides", key: "guides" as const },
-    { href: "/pricing", label: "Pricing", key: "pricing" as const },
   ];
 
   const isEditor = variant === "editor";
@@ -60,6 +59,7 @@ export default function TopNav({
             {link.label}
           </Link>
         ))}
+        <GithubNavbarButton />
       </div>
 
       {/* This is button will remove after testing the mock data */}

@@ -15,6 +15,7 @@ interface TemplatePreviewModalProps {
     badge: string;
     badgeClass: string;
     icon: string;
+    preset?: string;
   } | null;
 }
 
@@ -97,7 +98,7 @@ export default function TemplatePreviewModal({ isOpen, onClose, template }: Temp
           </div>
 
           <Link
-            href={`/editor/${template.id}`}
+            href={`/editor/${template.id}${template.preset ? `?preset=${template.preset}` : ""}`}
             className="w-full bg-[#fec700] text-black py-5 font-black uppercase tracking-widest text-xl border-4 border-black hover:bg-[#ff69c9] hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 active:translate-x-0 active:translate-y-0 active:shadow-none transition-all text-center block shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]"
           >
             Start Editing
