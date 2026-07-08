@@ -21,7 +21,7 @@ export function GithubFloatingWidget() {
   }, []);
 
   return (
-    <div className="fixed bottom-24 right-6 z-50 print:hidden font-body" ref={widgetRef}>
+    <div className="fixed bottom-16 right-6 z-50 print:hidden font-body" ref={widgetRef}>
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}

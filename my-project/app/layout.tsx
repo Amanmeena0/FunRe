@@ -27,13 +27,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light ${spaceGrotesk.variable} ${workSans.variable}`}
+      className={`light ${spaceGrotesk.variable} ${workSans.variable} min-h-screen`}
       suppressHydrationWarning
     >
-      <body className="bg-background text-on-background">
+      <body className="bg-background text-on-background min-h-screen flex flex-col">
         {children}
         <GithubFloatingWidget />
       </body>
     </html>
+
   );
 }

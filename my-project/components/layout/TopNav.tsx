@@ -15,7 +15,7 @@ export default function TopNav({
   const navLinks = [
     { href: "/templates", label: "Templates", key: "templates" as const },
     { href: "/guides", label: "Guides", key: "guides" as const },
-    { href: "/riot-bot", label: "Riot Bot", key: "riot-bot" as const },
+    { href: "/riot-bot", label: "Riot", key: "riot-bot" as const },
   ];
 
   const isEditor = variant === "editor";
