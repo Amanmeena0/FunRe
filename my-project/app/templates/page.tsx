@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import TopNav from "@/components/layout/TopNav";
 import Footer from "@/components/layout/Footer";
 import TemplateGridCard from "@/components/ui/TemplateGridCard";
@@ -54,11 +55,22 @@ export default function TemplatesPage() {
               Pick Your{" "}
               <span className="text-[#ff69c9] italic">Weapon</span>
             </h1>
-            <p className="text-xl max-w-2xl font-medium leading-relaxed font-body text-gray-800">
-              Standard resumes are for standard people. Choose a template that
-              screams authority and disrupts the hiring manager&apos;s afternoon
-              nap.
-            </p>
+
+            {/* Standard FAANG Redirect Banner */}
+            <div className="mt-8 p-6 bg-[#eeeeee] border-4 border-black shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] max-w-2xl font-body text-sm font-bold flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-black">
+              <div className="space-y-1">
+                <p className="text-base uppercase font-black font-headline">💼 Not in the mood for fun?</p>
+                <p className="text-xs font-semibold text-gray-700">Need a classic, boring, standard FAANG format instead?</p>
+              </div>
+              <Link
+                href="https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-black text-white hover:bg-[#fec700] hover:text-black px-4 py-2.5 border-2 border-black font-black uppercase tracking-wider text-xs shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] transition-all shrink-0 text-center select-none"
+              >
+                Go there instead
+              </Link>
+            </div>
           </div>
 
           {/* Template Grid */}

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { GithubNavbarButton } from "./GithubContributionWidget";
 
 interface TopNavProps {
-  activePage?: "templates" | "examples" | "guides" | "pricing";
+  activePage?: "templates" | "examples" | "guides" | "pricing" | "riot-bot";
   variant?: "landing" | "editor";
 }
 
@@ -15,6 +15,7 @@ export default function TopNav({
   const navLinks = [
     { href: "/templates", label: "Templates", key: "templates" as const },
     { href: "/guides", label: "Guides", key: "guides" as const },
+    { href: "/riot-bot", label: "Riot Bot", key: "riot-bot" as const },
   ];
 
   const isEditor = variant === "editor";
