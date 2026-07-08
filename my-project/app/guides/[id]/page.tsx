@@ -9,85 +9,6 @@ import MaterialIcon from "@/components/ui/Materialcon";
 const guideDetails = [
   {
     id: 0,
-    title: "ATS Bypass: Fact vs Fiction",
-    subtitle: "HOW TO BEAT THE ALGORITHMS",
-    badge: "ATS Strategy",
-    badgeClass: "bg-[#00B386] text-black",
-    readTime: "4 min read",
-    content: (
-      <div className="space-y-6 font-body">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <section className="space-y-2">
-            <h2 className="text-xl md:text-2xl font-black uppercase font-headline text-black">
-              The Truth About Applicant Tracking Systems
-            </h2>
-            <p className="text-black text-base md:text-lg leading-relaxed">
-              Many websites tell you to remove all colors, columns, and custom styling to pass ATS filters. <strong>This is fiction.</strong> Modern ATS parsers are sophisticated enough to extract plain text from styled layouts. What actually matters is your document's semantic structure, font standards, and header formatting.
-            </p>
-          </section>
-
-          <section className="space-y-2">
-            <h3 className="text-lg md:text-xl font-black uppercase font-headline text-black">
-              How to Guarantee a 100% Score
-            </h3>
-            <ul className="list-disc pl-5 space-y-2 text-black text-sm md:text-base">
-              <li>Ensure text is highlightable and readable (never upload scan PDFs).</li>
-              <li>Use clear, standard headings like "Experience", "Education", and "Skills".</li>
-              <li>Avoid inserting key details inside complex nested tables or graphics.</li>
-            </ul>
-          </section>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-[#ffd8ea] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
-            <div className="space-y-3">
-              <h4 className="text-lg font-black uppercase font-headline text-[#ab1f82]">
-                🛠️ ATS Validation Tool
-              </h4>
-              <p className="text-sm font-semibold text-black leading-relaxed">
-                Test how a parser actually parses your resume. Use this open-source hiring agent validator to benchmark your ATS performance:
-              </p>
-            </div>
-            <div className="mt-4">
-              <Link
-                href="https://github.com/interviewstreet/hiring-agent"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-[#ab1f82] text-white border-2 border-black py-2 px-4 font-black font-headline uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff69c9] hover:text-black hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer w-full justify-center"
-              >
-                <span>GitHub Hiring Agent</span>
-                <span className="material-symbols-outlined text-sm font-bold">open_in_new</span>
-              </Link>
-            </div>
-          </div>
-
-          <div className="bg-[#fec700] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between text-black">
-            <div className="space-y-3">
-              <h4 className="text-lg font-black uppercase font-headline text-black">
-                📄 Standard FAANG Layout
-              </h4>
-              <p className="text-sm font-semibold text-black leading-relaxed">
-                Looking for a classical, ultra-safe FAANG style LaTeX layout? Use the official Overleaf template used by top engineering candidates:
-              </p>
-            </div>
-            <div className="mt-4">
-              <Link
-                href="https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 bg-black text-white border-2 border-black py-2 px-4 font-black font-headline uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(254,199,0,1)] hover:bg-white hover:text-black hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer w-full justify-center"
-              >
-                <span>Overleaf FAANG Template</span>
-                <span className="material-symbols-outlined text-sm font-bold">open_in_new</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  },
-  {
-    id: 1,
     title: "Get Hired: The Unwritten Rules",
     subtitle: "THE UNWRITTEN RULES OF RECRUITMENT",
     badge: "Hiring Rules",
@@ -183,71 +104,86 @@ const guideDetails = [
     )
   },
   {
-    id: 2,
-    title: "Cover Letter Blueprint",
-    subtitle: "WRITE A COVER LETTER THAT ACTUALLY GETS READ",
-    badge: "Cover Letter",
-    badgeClass: "bg-[#fec700] text-black",
+    id: 1,
+    title: "ATS Bypass: Fact vs Fiction",
+    subtitle: "HOW TO BEAT THE ALGORITHMS",
+    badge: "ATS Strategy",
+    badgeClass: "bg-[#00B386] text-black",
     readTime: "4 min read",
     content: (
       <div className="space-y-6 font-body">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <section className="space-y-2">
             <h2 className="text-xl md:text-2xl font-black uppercase font-headline text-black">
-              The Anatomy of a High-Impact Cover Letter
+              The Truth About Applicant Tracking Systems
             </h2>
             <p className="text-black text-base md:text-lg leading-relaxed">
-              Stop copy-pasting standard online cover letters. Recruiters spot template text immediately. A great cover letter should be concise, structured, and customized to show how your experience perfectly overlaps with the company's biggest challenges.
+              Many websites tell you to remove all colors, columns, and custom styling to pass ATS filters. <strong>This is fiction.</strong> Modern ATS parsers are sophisticated enough to extract plain text from styled layouts. What actually matters is your document's semantic structure, font standards, and header formatting.
             </p>
           </section>
 
           <section className="space-y-2">
             <h3 className="text-lg md:text-xl font-black uppercase font-headline text-black">
-              The Three-Step Layout
+              How to Guarantee a 100% Score
             </h3>
-            <div className="space-y-2.5">
-              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
-                <span className="bg-[#ab1f82] text-white px-2 py-0.5 text-[10px] font-black uppercase shrink-0">1. Hook</span>
-                <p className="text-xs md:text-sm text-black leading-normal">State exactly why you want to work at this specific company and name an achievement that proves your speed.</p>
-              </div>
-              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
-                <span className="bg-[#00B386] text-black px-2 py-0.5 text-[10px] font-black uppercase shrink-0">2. Proof</span>
-                <p className="text-xs md:text-sm text-black leading-normal">Quantify one of your main projects and explain how that solution maps to their current roadmap.</p>
-              </div>
-              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
-                <span className="bg-[#fec700] text-black px-2 py-0.5 text-[10px] font-black uppercase shrink-0">3. Close</span>
-                <p className="text-xs md:text-sm text-black leading-normal">A clear, confident call to action for a sync or short discussion. No begging.</p>
-              </div>
-            </div>
+            <ul className="list-disc pl-5 space-y-2 text-black text-sm md:text-base">
+              <li>Ensure text is highlightable and readable (never upload scan PDFs).</li>
+              <li>Use clear, standard headings like "Experience", "Education", and "Skills".</li>
+              <li>Avoid inserting key details inside complex nested tables or graphics.</li>
+            </ul>
           </section>
         </div>
 
-        <div className="bg-[#ffffd4] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-black">
-          <div className="space-y-3">
-            <h4 className="text-lg font-black uppercase font-headline text-black">
-              ✉️ Overleaf Cover Letter Templates
-            </h4>
-            <p className="text-sm font-semibold text-black leading-relaxed">
-              Browse clean, recruiter-approved LaTeX styles to structure your letter with absolute authority:
-            </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-[#ffd8ea] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between">
+            <div className="space-y-3">
+              <h4 className="text-lg font-black uppercase font-headline text-[#ab1f82]">
+                🛠️ ATS Validation Tool
+              </h4>
+              <p className="text-sm font-semibold text-black leading-relaxed">
+                Test how a parser actually parses your resume. Use this open-source hiring agent validator to benchmark your ATS performance:
+              </p>
+            </div>
+            <div className="mt-4">
+              <Link
+                href="https://github.com/interviewstreet/hiring-agent"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-[#ab1f82] text-white border-2 border-black py-2 px-4 font-black font-headline uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff69c9] hover:text-black hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer w-full justify-center"
+              >
+                <span>GitHub Hiring Agent</span>
+                <span className="material-symbols-outlined text-sm font-bold">open_in_new</span>
+              </Link>
+            </div>
           </div>
-          <div className="mt-4">
-            <Link
-              href="https://www.overleaf.com/gallery/tagged/cover-letter"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#fec700] text-black border-2 border-black py-2 px-4 font-black font-headline uppercase text-sm tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff69c9] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer"
-            >
-              <span>Browse Overleaf Cover Letters</span>
-              <span className="material-symbols-outlined text-base font-bold">open_in_new</span>
-            </Link>
+
+          <div className="bg-[#fec700] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] flex flex-col justify-between text-black">
+            <div className="space-y-3">
+              <h4 className="text-lg font-black uppercase font-headline text-black">
+                📄 Standard FAANG Layout
+              </h4>
+              <p className="text-sm font-semibold text-black leading-relaxed">
+                Looking for a classical, ultra-safe FAANG style LaTeX layout? Use the official Overleaf template used by top engineering candidates:
+              </p>
+            </div>
+            <div className="mt-4">
+              <Link
+                href="https://www.overleaf.com/latex/templates/faangpath-simple-template/npsfpdqnxmbc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 bg-black text-white border-2 border-black py-2 px-4 font-black font-headline uppercase text-xs tracking-wider shadow-[3px_3px_0px_0px_rgba(254,199,0,1)] hover:bg-white hover:text-black hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer w-full justify-center"
+              >
+                <span>Overleaf FAANG Template</span>
+                <span className="material-symbols-outlined text-sm font-bold">open_in_new</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
     )
   },
   {
-    id: 3,
+    id: 2,
     title: "Current Hot Skills",
     subtitle: "DOMINATE THE JOB MARKET",
     badge: "In-Demand Skills",
@@ -371,6 +307,70 @@ const guideDetails = [
     )
   },
   {
+    id: 3,
+    title: "Cover Letter Blueprint",
+    subtitle: "WRITE A COVER LETTER THAT ACTUALLY GETS READ",
+    badge: "Cover Letter",
+    badgeClass: "bg-[#fec700] text-black",
+    readTime: "4 min read",
+    content: (
+      <div className="space-y-6 font-body">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <section className="space-y-2">
+            <h2 className="text-xl md:text-2xl font-black uppercase font-headline text-black">
+              The Anatomy of a High-Impact Cover Letter
+            </h2>
+            <p className="text-black text-base md:text-lg leading-relaxed">
+              Stop copy-pasting standard online cover letters. Recruiters spot template text immediately. A great cover letter should be concise, structured, and customized to show how your experience perfectly overlaps with the company's biggest challenges.
+            </p>
+          </section>
+
+          <section className="space-y-2">
+            <h3 className="text-lg md:text-xl font-black uppercase font-headline text-black">
+              The Three-Step Layout
+            </h3>
+            <div className="space-y-2.5">
+              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
+                <span className="bg-[#ab1f82] text-white px-2 py-0.5 text-[10px] font-black uppercase shrink-0">1. Hook</span>
+                <p className="text-xs md:text-sm text-black leading-normal">State exactly why you want to work at this specific company and name an achievement that proves your speed.</p>
+              </div>
+              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
+                <span className="bg-[#00B386] text-black px-2 py-0.5 text-[10px] font-black uppercase shrink-0">2. Proof</span>
+                <p className="text-xs md:text-sm text-black leading-normal">Quantify one of your main projects and explain how that solution maps to their current roadmap.</p>
+              </div>
+              <div className="bg-white border-2 border-black p-3 flex items-start gap-2">
+                <span className="bg-[#fec700] text-black px-2 py-0.5 text-[10px] font-black uppercase shrink-0">3. Close</span>
+                <p className="text-xs md:text-sm text-black leading-normal">A clear, confident call to action for a sync or short discussion. No begging.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div className="bg-[#ffffd4] border-4 border-black p-5 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] text-black">
+          <div className="space-y-3">
+            <h4 className="text-lg font-black uppercase font-headline text-black">
+              ✉️ Overleaf Cover Letter Templates
+            </h4>
+            <p className="text-sm font-semibold text-black leading-relaxed">
+              Browse clean, recruiter-approved LaTeX styles to structure your letter with absolute authority:
+            </p>
+          </div>
+          <div className="mt-4">
+            <Link
+              href="https://www.overleaf.com/gallery/tagged/cover-letter"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 bg-[#fec700] text-black border-2 border-black py-2 px-4 font-black font-headline uppercase text-sm tracking-wider shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-[#ff69c9] hover:-translate-y-0.5 hover:-translate-x-0.5 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none transition-all cursor-pointer"
+            >
+              <span>Browse Overleaf Cover Letters</span>
+              <span className="material-symbols-outlined text-base font-bold">open_in_new</span>
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  },
+  {
     id: 4,
     title: "Interview Prep Kit",
     subtitle: "CRUSH YOUR NEXT TECHNICAL SCREEN",
@@ -478,12 +478,13 @@ const guideDetails = [
 ];
 
 const guideTakeaways = [
-  "Bypass automated applicant filters using proper semantic document structure, standard headers, and highlightable text formats.",
   "Optimize resume signal density, cut out fluff, prioritize experience layout, and back up claims with verified credentials.",
-  "Construct a highly targeted three-section cover letter designed to hook recruiters, provide proof, and close confidently.",
+  "Bypass automated applicant filters using proper semantic document structure, standard headers, and highlightable text formats.",
   "Focus on high-leverage skills: AI engineering agent architectures, ML data pipelines, PyTorch networks, and Cloud MLOps.",
+  "Construct a highly targeted three-section cover letter designed to hook recruiters, provide proof, and close confidently.",
   "Prepare for technical screenings systematically using curated DSA sheets, System Design concepts, and AI stack roadmaps."
 ];
+
 
 export default function GuideDetailPage() {
   const params = useParams();

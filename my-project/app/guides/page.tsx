@@ -7,13 +7,6 @@ import Link from "next/link";
 
 const guides = [
   {
-    icon: "psychology",
-    title: "ATS Bypass: Fact vs Fiction",
-    readTime: "4 min read",
-    description: "Optimize your layout structure for applicant tracking parsers. Get access to the best ATS score analyzer and FAANG resume templates.",
-    badgeClass: "bg-[#00B386]",
-  },
-  {
     icon: "military_tech",
     title: "Get Hired: The Unwritten Rules",
     readTime: "5 min read",
@@ -21,11 +14,11 @@ const guides = [
     badgeClass: "bg-[#ff69c9]",
   },
   {
-    icon: "mail",
-    title: "Cover Letter Blueprint",
+    icon: "psychology",
+    title: "ATS Bypass: Fact vs Fiction",
     readTime: "4 min read",
-    description: "Construct an unignorable cover letter layout in 3 simple sections, and browse official Overleaf cover letter galleries.",
-    badgeClass: "bg-[#fec700]",
+    description: "Optimize your layout structure for applicant tracking parsers. Get access to the best ATS score analyzer and FAANG resume templates.",
+    badgeClass: "bg-[#00B386]",
   },
   {
     icon: "trending_up",
@@ -33,6 +26,13 @@ const guides = [
     readTime: "5 min read",
     description: "Discover tech skills in extremely high demand: AI engineering (agents, memory, prompt engineering), machine learning stacks, computer vision, MLOps, and future architectural patterns.",
     badgeClass: "bg-[#00d2ff] text-black",
+  },
+  {
+    icon: "mail",
+    title: "Cover Letter Blueprint",
+    readTime: "4 min read",
+    description: "Construct an unignorable cover letter layout in 3 simple sections, and browse official Overleaf cover letter galleries.",
+    badgeClass: "bg-[#fec700]",
   },
   {
     icon: "terminal",
