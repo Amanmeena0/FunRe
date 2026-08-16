@@ -14,7 +14,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Resume Riot | Build a resume that actually gets read.",
+  title: "Resume Bodo | Build a resume that actually gets read.",
   description:
     "Stop being another PDF in the pile. Use aggressive layouts, loud colors, and high-impact typography to demand attention from recruiters.",
 };

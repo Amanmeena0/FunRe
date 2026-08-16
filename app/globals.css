@@ -64,7 +64,7 @@
     box-shadow: none;
   }
 
-  .slider-riot::-webkit-slider-thumb {
+  .slider-bodo::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 24px;
@@ -74,7 +74,7 @@
     cursor: pointer;
   }
 
-  .slider-riot {
+  .slider-bodo {
     -webkit-appearance: none;
     appearance: none;
     height: 16px;

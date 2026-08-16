@@ -93,7 +93,7 @@ export default function TemplatesPage() {
         template={selectedTemplate} 
       />
 
-      <Footer fixed={false} />
+      <Footer fixed={true} />
     </>
   );
 }

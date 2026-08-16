@@ -14,7 +14,7 @@ export default function CTASection() {
 
       <div className="relative z-10 flex flex-col items-center max-w-4xl">
         <span className="bg-[#fec700] text-black font-black px-4 py-1.5 border-2 border-black text-sm uppercase tracking-widest mb-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-          JOIN THE RIOT
+          JOIN THE BODO
         </span>
         
         <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter text-white mb-6 font-headline leading-none">

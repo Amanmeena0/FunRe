@@ -4,7 +4,7 @@ import Link from "next/link";
 import { GithubNavbarButton } from "./GithubContributionWidget";
 
 interface TopNavProps {
-  activePage?: "templates" | "examples" | "guides" | "pricing" | "riot-bot";
+  activePage?: "templates" | "examples" | "guides" | "pricing" | "bodo-bot";
   variant?: "landing" | "editor";
 }
 
@@ -15,7 +15,7 @@ export default function TopNav({
   const navLinks = [
     { href: "/templates", label: "Templates", key: "templates" as const },
     { href: "/guides", label: "Guides", key: "guides" as const },
-    { href: "/riot-bot", label: "Riot", key: "riot-bot" as const },
+    { href: "/bodo-bot", label: "ATS", key: "bodo-bot" as const },
   ];
 
   const isEditor = variant === "editor";
@@ -43,7 +43,7 @@ export default function TopNav({
           isEditor ? "text-2xl" : "text-4xl"
         }`}
       >
-        Resume Riot
+        Resume Bodo
       </Link>
 
       <div className="hidden md:flex gap-8 items-center">

@@ -1,9 +1,12 @@
 import { type NextRequest } from 'next/server'
 import { createClient } from '@/lib/supabase/middleware'
 
-export default async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   return createClient(request)
 }
+
+export default proxy
+
 
 export const config = {
   matcher: [

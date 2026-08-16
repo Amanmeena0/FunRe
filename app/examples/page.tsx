@@ -159,7 +159,7 @@ export default function ExamplesPage() {
         template={modalTemplate} 
       />
 
-      <Footer fixed={false} />
+      <Footer fixed={true} />
     </>
   );
 }

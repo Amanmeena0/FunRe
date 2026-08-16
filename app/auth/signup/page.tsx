@@ -3,7 +3,7 @@ export default function SignupPage() {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8">
         <h1 className="text-4xl font-black uppercase mb-6 tracking-tight">Sign Up</h1>
-        <p className="mb-8 font-medium">Start your riot. Create your first high-impact resume.</p>
+        <p className="mb-8 font-medium">Start your Bodo. Create your first high-impact resume.</p>
         <div className="flex flex-col gap-4">
           <input 
             type="email" 

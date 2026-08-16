@@ -657,7 +657,7 @@ export default function GuideDetailPage() {
         </div>
       </main>
 
-      <Footer fixed={false} />
+      <Footer fixed={true} />
     </>
   );
 }

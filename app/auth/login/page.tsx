@@ -3,7 +3,7 @@ export default function LoginPage() {
     <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md bg-white border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-8">
         <h1 className="text-4xl font-black uppercase mb-6 tracking-tight">Login</h1>
-        <p className="mb-8 font-medium">Join the riot. Build a resume that demands attention.</p>
+        <p className="mb-8 font-medium">Join the Bodo. Build a resume that demands attention.</p>
         <div className="flex flex-col gap-4">
           <input 
             type="email" 

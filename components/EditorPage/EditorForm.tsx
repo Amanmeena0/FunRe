@@ -81,7 +81,7 @@ export default function EditorForm({ data, onChange, activeTab }: EditorFormProp
                 max="100"
                 value={sassLevel}
                 onChange={(e) => setSassLevel(Number(e.target.value))}
-                className="w-full h-4 bg-white border-2 border-black appearance-none slider-riot cursor-pointer"
+                className="w-full h-4 bg-white border-2 border-black appearance-none slider-bodo cursor-pointer"
                 aria-label="Sass level"
               />
               <p className="mt-4 text-xs font-bold uppercase opacity-80 text-left">

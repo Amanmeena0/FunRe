@@ -12,7 +12,7 @@ export default function Footer({ fixed = true }: FooterProps) {
       } w-full z-50 flex justify-between items-center px-8 py-4 border-t-4 border-black`}
     >
       <div className="text-[#fec700] font-label font-bold uppercase text-xs tracking-[0.2em]">
-        © 2024 RESUME RIOT. NO MERCY.
+        © 2024 RESUME BODO. NO MERCY.
       </div>
       <div className="flex gap-8">
         {["Privacy", "Terms", "Support"].map((item) => (

@@ -37,14 +37,14 @@ export default function FeatureSection() {
     <section className="border-t-4 border-black bg-white">
       {/* Manifesto Banner */}
       <div className="border-b-4 border-black bg-[#fec700] py-4 px-6 text-center font-headline uppercase font-black tracking-wider text-base md:text-lg text-black">
-        ⚡ RESUME RIOT MANIFESTO • BUILT TO BE SEEN • NO MORE BORING TEMPLATES ⚡
+        ⚡ RESUME BODO MANIFESTO • BUILT TO BE SEEN • NO MORE BORING TEMPLATES ⚡
       </div>
 
       <div className="grid lg:grid-cols-2 gap-0 border-b-4 border-black">
         {/* Left Column: Manifesto & Feature Cards */}
         <div className="p-8 md:p-16 flex flex-col justify-center border-b-4 lg:border-b-0 lg:border-r-4 border-black bg-white">
           <span className="bg-[#ab1f82] text-white px-3 py-1 font-black text-xs uppercase tracking-widest w-fit mb-6 border-2 border-black shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">
-            THE RIOT WAY
+            THE BODO WAY
           </span>
           <h2 className="text-4xl md:text-6xl font-black uppercase leading-[0.95] mb-6 font-headline text-black">
             Stop Asking <br />
@@ -104,7 +104,7 @@ export default function FeatureSection() {
             <div className="p-6 space-y-4 text-sm">
               <div className="flex gap-2">
                 <span className="text-[#00d2ff]">$</span>
-                <span>npx run-resume --template=brutalist-riot</span>
+                <span>npx run-resume --template=brutalist-bodo</span>
               </div>
               <div className="text-gray-400">
                 ⚡ Initializing layout parsing... <br />

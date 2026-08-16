@@ -15,7 +15,7 @@ export default function HomePage() {
         <FeatureSection />
         <CTASection />
       </main>
-      <Footer fixed={false} />
+      <Footer fixed={true} />
     </>
   );
 }

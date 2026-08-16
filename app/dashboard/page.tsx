@@ -10,7 +10,7 @@ export default function DashboardPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] bg-white">
             <h2 className="text-3xl font-black uppercase mb-4">My Resumes</h2>
-            <p className="mb-6 font-medium">You haven&apos;t created any riots yet.</p>
+            <p className="mb-6 font-medium">You haven&apos;t created any Bodos yet.</p>
             <button className="bg-primary text-white font-black px-6 py-3 border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] uppercase">
               Create New
             </button>

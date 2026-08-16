@@ -62,7 +62,7 @@ export default function GuidesPage() {
           {/* Header */}
           <div className="mb-10">
             <span className="bg-[#ab1f82] text-white px-2 py-0.5 font-bold text-[10px] uppercase tracking-widest border-2 border-black shadow-[1.5px_1.5px_0px_0px_rgba(0,0,0,1)]">
-              RIOTEER HANDBOOK
+              BODOER HANDBOOK
             </span>
             <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] mt-4 mb-4 font-headline text-black">
               Battle <span className="text-[#00B386] italic">Guides</span>
@@ -110,7 +110,7 @@ export default function GuidesPage() {
         </div>
       </main>
 
-      <Footer fixed={false} />
+      <Footer fixed={true} />
     </>
   );
 }

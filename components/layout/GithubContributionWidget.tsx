@@ -57,7 +57,7 @@ export function GithubFloatingWidget() {
           {/* Body */}
           <div className="p-5 flex flex-col gap-4">
             <p className="text-xs md:text-sm font-medium text-gray-800 leading-relaxed font-body">
-              Resume Riot is open source! Help us make resume designs louder and bolder, or get assistance if you run into issues.
+              Resume Bodo is open source! Help us make resume designs louder and bolder, or get assistance if you run into issues.
             </p>
 
             <div className="flex flex-col gap-3">
