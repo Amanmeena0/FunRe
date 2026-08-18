@@ -16,7 +16,7 @@ export default function EditorFooter() {
     <footer className="fixed bottom-0 left-0 w-full h-14 z-[100] flex justify-between items-center px-8 py-2 bg-[#1b1b1b] dark:bg-black border-t-4 border-black print:hidden">
       <div className="flex items-center gap-6">
         <span className="text-[#fec700] font-headline text-xs font-bold uppercase tracking-widest hidden md:inline">
-          © 2024 RESUME BODO. NO MERCY.
+          © 2024 BODO. NO MERCY.
         </span>
         <div className="flex gap-4">
           {["Privacy", "Terms", "Support"].map((item) => (

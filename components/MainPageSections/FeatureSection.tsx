@@ -37,7 +37,7 @@ export default function FeatureSection() {
     <section className="border-t-4 border-black bg-white">
       {/* Manifesto Banner */}
       <div className="border-b-4 border-black bg-[#fec700] py-4 px-6 text-center font-headline uppercase font-black tracking-wider text-base md:text-lg text-black">
-        ⚡ RESUME BODO MANIFESTO • BUILT TO BE SEEN • NO MORE BORING TEMPLATES ⚡
+        ⚡ BODO MANIFESTO • BUILT TO BE SEEN • NO MORE BORING TEMPLATES ⚡
       </div>
 
       <div className="grid lg:grid-cols-2 gap-0 border-b-4 border-black">

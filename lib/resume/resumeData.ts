@@ -194,8 +194,8 @@ export const designDictatorData: ResumeData = {
   ],
   Projects: [
     {
-      name: "Resume Bodo Style System",
-      description: "Architected the original design components and typography scales for the Resume Bodo application.",
+      name: "Bodo Style System",
+      description: "Architected the original design components and typography scales for the Bodo application.",
       link: "https://figma.com/@resumebodo"
     },
     {

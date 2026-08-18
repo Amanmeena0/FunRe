@@ -43,7 +43,7 @@ export default function TopNav({
           isEditor ? "text-2xl" : "text-4xl"
         }`}
       >
-        Resume Bodo
+        Bodo
       </Link>
 
       <div className="hidden md:flex gap-8 items-center">
